@@ -1,0 +1,203 @@
+/* ==========================================================================
+   FIT & PLUS - MASTER STYLESHEET
+   Design System: FIT & PLUS
+   ========================================================================== */
+
+/* --- CSS Variables & Design Tokens --- */
+:root {
+  --color-surface: #131313;
+  --color-surface-lowest: #0e0e0e;
+  --color-surface-dim: #131313;
+  --color-surface-bright: #3a3939;
+  --color-surface-container: #201f1f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #eabcb6;
+  --color-primary: #ffb4ab;
+  --color-primary-container: #ff5448;
+  --color-on-primary: #690004;
+  --color-secondary: #c3c6ce;
+  --color-neon-lime: #CCFF00;
+  --color-apex-red: #E50914;
+  --color-apex-red-hover: #FF1820;
+
+  --font-hero: 'Anton', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-technical: 'Barlow Condensed', sans-serif;
+}
+
+/* --- Base & Reset Styles --- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-surface-lowest);
+    color: var(--color-on-surface);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* --- Custom Slim Modern Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e0e0e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-apex-red);
+}
+
+/* --- Text Selection Styling --- */
+::selection {
+  background-color: var(--color-primary-container);
+  color: #5c0003;
+}
+
+/* --- Keyframe Animations --- */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* --- Glow and Neon Effects --- */
+.glow-red {
+  box-shadow: 0 0 30px rgba(229, 9, 20, 0.45);
+}
+
+.glow-red-hover:hover {
+  box-shadow: 0 0 45px rgba(255, 24, 32, 0.7);
+}
+
+.glow-lime {
+  box-shadow: 0 0 25px rgba(204, 255, 0, 0.35);
+}
+
+.glow-lime-hover:hover {
+  box-shadow: 0 0 40px rgba(204, 255, 0, 0.6);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 30px rgba(255, 84, 72, 0.5);
+}
+
+.text-glow-lime {
+  text-shadow: 0 0 20px rgba(204, 255, 0, 0.5);
+}
+
+/* --- Interactive Notification Toast --- */
+.toast-notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #111418;
+  border-left: 4px solid var(--color-apex-red);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(229, 9, 20, 0.3);
+  transform: translateY(150%);
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--font-technical);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.toast-notification.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-notification.lime {
+  border-left-color: var(--color-neon-lime);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(204, 255, 0, 0.3);
+}
+
+/* --- Mobile Menu Drawer --- */
+.mobile-nav-drawer {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mobile-nav-drawer.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav-drawer.closed {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* --- Black Sections Background Texture (fondo.png) --- */
+.bg-texture-black {
+  position: relative;
+  background-color: #050505;
+  background-image: 
+    linear-gradient(to bottom, rgba(5, 5, 5, 0.90) 0%, rgba(5, 5, 5, 0.84) 50%, rgba(5, 5, 5, 0.92) 100%),
+    url('../assets/images/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Native Pure Parallax for Gym2 (Bulletproof in all modern desktop/laptop browsers) */
+.parallax-gym2 {
+  position: relative;
+  background-image: 
+    linear-gradient(to bottom, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.40) 50%, rgba(5, 5, 5, 0.90) 100%),
+    url('../assets/images/gym2.jpg');
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+

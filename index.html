@@ -1,0 +1,773 @@
+<!DOCTYPE html><html class="dark" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&amp;family=Bebas+Neue&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/config.js"></script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 pointer-events-auto border-b-2 border-[#E50914] shadow-[0_4px_25px_rgba(229,9,20,0.35)]">
+    <!-- Header Background Torn Stone Image -->
+    <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+      <img src="assets/images/header.png" alt="Header Banner Texture" class="w-full h-full object-fill md:object-cover object-top filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]">
+    </div>
+
+    <!-- Header Content Layer -->
+    <div class="relative z-10 h-24 md:h-28 max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between pt-1 pb-3">
+      <!-- Brand Logo -->
+      <a href="#inicio" class="flex items-center gap-4 group">
+        <img alt="FIT & PLUS Logo Oficial" class="h-10 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(229,9,20,0.6)]" src="assets/images/logofit.png">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden xl:flex items-center gap-8" data-active-classes="text-on-surface border-b-2 border-primary-container">
+        <a aria-current="page" class="font-label-caps text-[14px] uppercase tracking-widest transition-colors py-2 text-on-surface border-b-2 border-primary-container" data-path="inicio" href="#inicio">INICIO</a>
+        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-[#CCFF00] transition-colors py-2" data-path="cronograma" href="#cronograma">CRONOGRAMA</a>
+        
+        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-on-surface transition-colors py-2" data-path="instalaciones" href="#instalaciones">INSTALACIONES</a>
+        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-on-surface transition-colors py-2" data-path="tarifas" href="#tarifas">TARIFAS</a>
+        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-on-surface transition-colors py-2" data-path="galeria" href="#galeria">GALERÍA</a>
+        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-on-surface transition-colors py-2" data-path="contacto" href="#contacto">CONTACTO</a>
+      </nav>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <button id="mobile-menu-toggle" aria-label="Abrir menú" class="xl:hidden p-2 text-on-surface hover:text-primary-container focus:outline-none">
+          <span class="material-symbols-outlined text-[32px]">menu</span>
+        </button>
+        <a class="hidden sm:inline-flex items-center justify-center font-label-caps text-[14px] uppercase bg-[#E50914] hover:bg-[#FF1820] text-on-surface tracking-wider px-7 py-3 rounded-none transition-all duration-300 shadow-[0_0_25px_rgba(229,9,20,0.45)] hover:shadow-[0_0_35px_rgba(255,24,32,0.7)] hover:-translate-y-0.5" data-path="tarifas" href="#tarifas">
+          [ ÚNETE AHORA ]
+        </a>
+      </div>
+    </div>
+    <!-- Bottom Thin Red Accent Line -->
+    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-[#E50914] shadow-[0_0_14px_#E50914] z-20 pointer-events-none"></div>
+  </header><main class="w-full pt-24 md:pt-28 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full text-on-surface select-none overflow-x-hidden">
+<!-- ==========================================
+       HERO CINEMATOGRÁFICO
+  =========================================== -->
+<section id="inicio" class="relative w-full min-h-[105vh] md:min-h-[118vh] flex flex-col justify-center -mt-20 pt-32 md:pt-40 pb-16 md:pb-20 overflow-hidden bg-[#050505] z-10">
+<!-- Background Video with Scrims & Dynamic Athletic Atmosphere -->
+<div class="absolute inset-0 z-0">
+  <video autoplay loop muted playsinline poster="assets/images/hero-bg.jpg" class="w-full h-full object-cover object-center filter brightness-[0.80] contrast-[1.15] scale-[1.01]">
+    <source src="assets/images/portadafitandplus.mov" type="video/mp4">
+    <source src="assets/images/portadafitandplus.mov" type="video/quicktime">
+  </video>
+  <!-- Radial Spotlight Overlay into Carbon Black -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,#050505_95%)] opacity-55"></div>
+  <!-- Directional Top & Side Gradients -->
+  <div class="absolute inset-0 bg-gradient-to-b from-[#050505]/90 via-transparent to-transparent"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-[#050505]/40 to-transparent"></div>
+  <!-- Degradado en negro moderado y limpio en la base para unir suavemente con la sección inferior sin tapar el vídeo -->
+  <div class="absolute inset-x-0 bottom-0 h-48 md:h-72 lg:h-96 bg-gradient-to-t from-[#050505] via-[#050505]/85 to-transparent pointer-events-none z-10"></div>
+</div>
+
+<!-- Monumental Typography & Dual CTA Group (Solo Título, Subtítulo y Botones) -->
+<div class="relative z-20 max-w-[1600px] w-full mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop my-auto py-20 md:py-28">
+  <div class="max-w-5xl space-y-8">
+    <h1 class="font-['Barlow_Condensed'] italic font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[9.5rem] 2xl:text-[10.5rem] uppercase tracking-tight leading-[0.84] m-0 text-white drop-shadow-[0_12px_45px_rgba(0,0,0,0.95)]">
+      ENTRENA SIN LÍMITES.<br>
+      <span class="text-[#E50914] drop-shadow-[0_0_55px_rgba(229,9,20,0.7)] not-italic">FORJA TU LEYENDA.</span>
+    </h1>
+    <p class="font-body-lg text-lg md:text-2xl text-secondary max-w-2xl leading-relaxed pt-2 drop-shadow-[0_4px_15px_rgba(0,0,0,0.95)]">
+      Entrena más. Muévete mejor. Conviértete en tu mejor versión en el templo de rendimiento biomecánico más avanzado de la capital.
+    </p>
+    <!-- CTA Action Buttons -->
+    <div class="pt-6 flex flex-wrap items-center gap-5">
+      <a class="inline-flex items-center justify-center gap-3 font-label-caps text-base md:text-lg uppercase bg-[#E50914] hover:bg-[#FF1820] text-on-surface px-10 py-5 transition-all duration-300 shadow-[0_0_35px_rgba(229,9,20,0.55)] hover:shadow-[0_0_50px_rgba(255,24,32,0.8)] hover:-translate-y-1 group" data-path="tarifas" href="#tarifas">
+        <span>[ EMPIEZA AHORA ]</span>
+        <span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">arrow_outward</span>
+      </a>
+      <a class="inline-flex items-center justify-center gap-2 font-label-caps text-base md:text-lg uppercase bg-[#111418]/80 hover:bg-white/15 text-on-surface px-10 py-5 backdrop-blur-md transition-all duration-300 border border-white/20 hover:border-white/50" href="#instalaciones">
+        <span>DESCUBRE EL CLUB</span>
+        <span class="material-symbols-outlined text-[20px]">sports_gymnastics</span>
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+<!-- ==========================================
+       LA BANDA DIAGONAL KINÉTICA (MARQUEE RIBBON)
+  =========================================== -->
+<div class="relative w-full z-40 -mt-14 md:-mt-20 -mb-10 md:-mb-14 pointer-events-none" style="overflow: visible;">
+<div class="w-[120%] -ml-[10%] transform -rotate-2 md:-rotate-3 bg-gradient-to-r from-[#720008] via-[#E50914] to-[#FF1820] py-4 md:py-5 shadow-[0_0_50px_rgba(229,9,20,0.85)] pointer-events-auto">
+<div class="flex whitespace-nowrap overflow-hidden select-none">
+<div class="inline-flex gap-8 items-center text-black font-headline-md text-[24px] md:text-[32px] tracking-[0.18em] uppercase animate-marquee font-bold">
+<span class="">TRAIN HARD</span>
+<span class="text-white/60">·</span>
+<span class="">MOVE BETTER</span>
+<span class="text-white/60">·</span>
+<span class="">LIVE STRONG</span>
+<span class="text-white/60">·</span>
+<span class="">PUSH</span>
+<span class="text-white/60">·</span>
+<span class="">GROW</span>
+<span class="text-white/60">·</span>
+<span class="">REPEAT</span>
+<span class="text-white/60">·</span>
+<span class="">FIT & PLUS</span>
+<span class="text-white/60">·</span>
+<span class="">TRAIN HARD</span>
+<span class="text-white/60">·</span>
+<span class="">MOVE BETTER</span>
+<span class="text-white/60">·</span>
+<span class="">LIVE STRONG</span>
+<span class="text-white/60">·</span>
+<span class="">PUSH</span>
+<span class="text-white/60">·</span>
+<span class="">GROW</span>
+<span class="text-white/60">·</span>
+<span class="">REPEAT</span>
+<span class="text-white/60">·</span>
+<span class="">FIT & PLUS</span>
+<span class="text-white/60">·</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ==========================================
+       SECCIÓN INTRO EDITORIAL ("EL MANIFIESTO")
+  =========================================== -->
+<section class="w-full bg-texture-black relative z-10 overflow-hidden pt-36 sm:pt-44 md:pt-52 pb-12 lg:pb-36 min-h-[640px] lg:min-h-[760px] flex flex-col lg:flex-row lg:items-center">
+
+  <!-- Main Left Text Group (Más a la izquierda en ordenador) -->
+  <div class="max-w-[1650px] w-full mx-auto px-margin md:px-margin-tablet lg:pl-6 xl:pl-10 lg:pr-margin-desktop relative z-10">
+    <div class="max-w-2xl lg:max-w-3xl xl:max-w-4xl space-y-8 md:space-y-10 pt-4 md:pt-8 lg:-ml-2">
+      
+      <div class="flex items-center gap-3">
+        <span class="w-8 h-[3px] bg-primary-container"></span>
+        <span class="font-technical-mono text-sm md:text-base uppercase tracking-[0.3em] text-primary-container font-bold">EL MANIFIESTO FIT & PLUS</span>
+      </div>
+      
+      <h2 class="font-headline-xl text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[9rem] uppercase text-on-surface leading-[0.88] tracking-tight m-0">
+        NO VENIMOS<br>
+        A ENTRENAR.<br>
+        VENIMOS<br>
+        A <span class="text-primary-container underline decoration-primary-container/40 underline-offset-8">CAMBIAR.</span>
+      </h2>
+
+      <div class="space-y-6 text-secondary font-body-lg text-xl md:text-2xl leading-relaxed">
+        <p class="text-white font-medium">
+          FIT & PLUS nació del rechazo a la mediocridad comercial de los gimnasios tradicionales. Creemos en la fricción intencionada, la ciencia del movimiento cinético y la arquitectura de la perseverancia.
+        </p>
+        <p class="text-gray-300 text-lg md:text-xl">
+          Cada barra olímpica calibrada, cada sensor de velocidad y cada rincón de nuestras zonas de choque han sido diseñados bajo estándares atléticos mundiales para que encuentres tu verdadero umbral de potencia.
+        </p>
+      </div>
+
+      <!-- Technical Specs Highlights (Agrandados) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-4">
+        <div class="bg-[#0B0D0F]/90 backdrop-blur-md p-5 border-l-4 border-primary-container shadow-lg">
+          <span class="font-stat-counter text-4xl sm:text-5xl text-on-surface block leading-none font-bold">100%</span>
+          <span class="font-label-caps text-xs sm:text-sm text-secondary uppercase tracking-wider mt-2 block">EQUIPO ROGUE & ELEIKO</span>
+        </div>
+        <div class="bg-[#0B0D0F]/90 backdrop-blur-md p-5 border-l-4 border-surface-container-highest shadow-lg">
+          <span class="font-stat-counter text-4xl sm:text-5xl text-on-surface block leading-none font-bold">0.0</span>
+          <span class="font-label-caps text-xs sm:text-sm text-secondary uppercase tracking-wider mt-2 block">EXCUSAS TOLERADAS</span>
+        </div>
+        <div class="bg-[#0B0D0F]/90 backdrop-blur-md p-5 border-l-4 border-primary-container shadow-lg">
+          <span class="font-stat-counter text-4xl sm:text-5xl text-primary-container block leading-none font-bold">ISO</span>
+          <span class="font-label-caps text-xs sm:text-sm text-secondary uppercase tracking-wider mt-2 block">BIO-MECÁNICA PRO</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Image Container (Mobile: Abajo de la sección con degradado hacia arriba | Desktop: A la derecha pegado al borde con degradado a la izquierda) -->
+  <div class="relative lg:absolute top-auto lg:top-0 bottom-0 right-0 w-full lg:w-[50%] xl:w-[52%] h-[380px] sm:h-[480px] lg:h-full z-0 overflow-hidden mt-12 lg:mt-0">
+    <img src="assets/images/manifiesto-chalk.jpg" alt="Atleta aplicando magnesio FIT & PLUS" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-90 transform hover:scale-105 transition-transform duration-700">
+    
+    <!-- Mobile Gradient Fade Upward to Black -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-[#050505] lg:hidden"></div>
+    
+    <!-- Desktop Horizontal Gradient Fade Left to Black -->
+    <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/75 to-transparent"></div>
+    
+    <!-- Desktop Top & Bottom Edge Soft Fade -->
+    <div class="hidden lg:block absolute inset-0 bg-gradient-to-b from-[#050505]/80 via-transparent to-[#050505]/90"></div>
+  </div>
+
+</section>
+
+<!-- ==========================================
+     BANNER CINEMATOGRÁFICO DE LADO A LADO (FOTOHORI)
+=========================================== -->
+<div class="relative w-full overflow-hidden bg-texture-black py-6 md:py-12 shadow-[0_0_50px_rgba(0,0,0,0.9)]">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(229,9,20,0.15)_0%,transparent_75%)] pointer-events-none"></div>
+  <div class="w-full flex items-center justify-center min-h-[340px] sm:min-h-[440px] md:min-h-[auto]">
+    <img alt="Atleta Fuerza Fit & Plus ejecutando Front Squat con barra olímpica" class="w-full h-full min-h-[340px] sm:min-h-[440px] md:min-h-0 object-cover md:object-contain block transform hover:scale-[1.008] transition-transform duration-700 select-none" src="assets/images/fotohori.png">
+  </div>
+</div>
+
+<section id="cronograma" class="w-full bg-texture-black pt-space-3xl pb-space-3xl relative">
+    <div class="max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+      
+      <!-- Header de Sección (Letras de PROGRAMA SEMANAL Agrandadas) -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16 border-b border-white/10 pb-10">
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-3 h-3 rounded-full bg-[#CCFF00] animate-pulse shadow-[0_0_15px_#CCFF00]"></span>
+            <span class="font-technical-mono uppercase tracking-[0.28em] text-[#CCFF00] text-sm md:text-base font-bold">DISCIPLINAS DE RENDIMIENTO // FIT & PLUS</span>
+          </div>
+          <h2 class="font-headline-xl text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[11.5rem] uppercase text-on-surface leading-none tracking-tight m-0">
+            PROGRAMA <span class="text-[#CCFF00] drop-shadow-[0_0_45px_rgba(204,255,0,0.55)]">SEMANAL</span>
+          </h2>
+        </div>
+        <p class="font-body-md text-lg md:text-2xl text-secondary max-w-lg leading-relaxed">
+          Sistemas de entrenamiento biomecánico estructurados para maximizar fuerza, resistencia metabólica y potencia neuromuscular.
+        </p>
+      </div>
+
+      <!-- 1. Grid de los 4 Tipos de Entrenamiento (Tarjetas Agrandadas con Títulos Monumentales) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        
+        <!-- Card 1: HIBRIDFIT -->
+        <div class="group relative bg-[#111418] min-h-[420px] sm:min-h-[480px] lg:min-h-[540px] flex items-end p-8 md:p-12 overflow-hidden transition-all duration-300 border border-white/10 hover:border-[#CCFF00] shadow-2xl hover:shadow-[0_0_35px_rgba(204,255,0,0.25)]">
+          <!-- Sharp Clear Image (No blur) -->
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.80] contrast-110" alt="HIBRIDFIT" src="assets/images/hibridfit.jpg">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent"></div>
+          
+          <!-- Only Name (Agrandado) -->
+          <h3 class="relative z-10 font-headline-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase text-[#F5F5F5] group-hover:text-[#CCFF00] transition-colors leading-none tracking-wide m-0 drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]">
+            HIBRIDFIT
+          </h3>
+        </div>
+
+        <!-- Card 2: FUERZA FIT & PLUS -->
+        <div class="group relative bg-[#111418] min-h-[420px] sm:min-h-[480px] lg:min-h-[540px] flex items-end p-8 md:p-12 overflow-hidden transition-all duration-300 border-2 border-[#CCFF00]/70 hover:border-[#CCFF00] shadow-[0_0_30px_rgba(204,255,0,0.2)] hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]">
+          <!-- Sharp Clear Image (No blur) -->
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.80] contrast-110" alt="FUERZA FIT & PLUS" src="assets/images/fuerza-barbell.jpg">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent"></div>
+          
+          <!-- Only Name (Agrandado) -->
+          <h3 class="relative z-10 font-headline-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase text-[#CCFF00] drop-shadow-[0_0_25px_rgba(204,255,0,0.5)] leading-none tracking-wide m-0">
+            FUERZA FIT & PLUS
+          </h3>
+        </div>
+
+        <!-- Card 3: IRONLEGS -->
+        <div class="group relative bg-[#111418] min-h-[420px] sm:min-h-[480px] lg:min-h-[540px] flex items-end p-8 md:p-12 overflow-hidden transition-all duration-300 border border-white/10 hover:border-[#CCFF00] shadow-2xl hover:shadow-[0_0_35px_rgba(204,255,0,0.25)]">
+          <!-- Sharp Clear Image (No blur) -->
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.80] contrast-110" alt="IRONLEGS" src="assets/images/ironlegs-mobility.jpg">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent"></div>
+          
+          <!-- Only Name (Agrandado) -->
+          <h3 class="relative z-10 font-headline-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase text-[#F5F5F5] group-hover:text-[#CCFF00] transition-colors leading-none tracking-wide m-0 drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]">
+            IRONLEGS
+          </h3>
+        </div>
+
+        <!-- Card 4: TWC (WARRIOR CHALLENGE) -->
+        <div class="group relative bg-[#111418] min-h-[420px] sm:min-h-[480px] lg:min-h-[540px] flex items-end p-8 md:p-12 overflow-hidden transition-all duration-300 border border-white/10 hover:border-[#CCFF00] shadow-2xl hover:shadow-[0_0_35px_rgba(204,255,0,0.25)]">
+          <!-- Sharp Clear Image (No blur) -->
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.80] contrast-110" alt="THE WARRIOR CHALLENGE" src="assets/images/spinning-ride.jpg">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent"></div>
+          
+          <!-- Only Name (Agrandado) -->
+          <h3 class="relative z-10 font-headline-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase text-[#F5F5F5] group-hover:text-[#CCFF00] transition-colors leading-none tracking-wide m-0 drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]">
+            TWC (WARRIOR)
+          </h3>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. SECCIÓN HORARIOS FULL-WIDTH INDEPENDIENTE (PARALLAX PURO GYM2 AL BAJAR/SUBIR) -->
+  <section id="horarios" class="parallax-gym2 w-full py-40 md:py-60 border-y border-white/10 shadow-[0_0_80px_rgba(0,0,0,0.95)]">
+    
+    <!-- Capa de contenido de Horarios centrada encima del fondo parallax -->
+    <div class="relative z-10 max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop text-center space-y-12">
+      
+      <!-- Badge y Título Enorme (Sin Subtítulo) -->
+      <div class="space-y-4 max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-3 bg-black/85 px-5 py-2 border-l-2 border-[#CCFF00] shadow-[0_0_20px_rgba(204,255,0,0.35)]">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#CCFF00] animate-pulse shadow-[0_0_12px_#CCFF00]"></span>
+          <span class="font-technical-mono text-technical-mono uppercase tracking-[0.25em] text-[#CCFF00] text-xs md:text-sm">CUADRANTE OFICIAL DE SESIONES</span>
+          <span class="px-2 py-0.5 bg-[#CCFF00]/10 border border-[#CCFF00]/40 text-[#CCFF00] font-technical-mono text-[10px] md:text-xs tracking-widest uppercase">LIVE SCHEDULE</span>
+        </div>
+
+        <h3 class="font-headline-xl text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase text-white leading-none tracking-tight">
+          HORARIO <span class="text-[#CCFF00] drop-shadow-[0_0_35px_rgba(204,255,0,0.5)]">SEMANAL</span>
+        </h3>
+      </div>
+
+      <!-- Tabla Clásica de Horarios Agrandada para PC y Portátil -->
+      <div class="overflow-x-auto pb-4 max-w-6xl xl:max-w-7xl mx-auto">
+        <table class="w-full text-center border-collapse bg-black/85 backdrop-blur-md border border-white/20 shadow-[0_0_50px_rgba(0,0,0,0.9)]">
+          <thead>
+            <tr class="border-b-2 border-[#CCFF00] bg-black/95">
+              <th class="p-4 md:p-6 lg:p-7 font-technical-mono text-[13px] md:text-[16px] lg:text-[18px] text-gray-400 uppercase tracking-widest border-r border-white/10 text-left w-24 md:w-36 lg:w-44">
+                HORA
+              </th>
+              <th class="p-4 md:p-6 lg:p-7 border-r border-white/10">
+                <span class="block font-technical-mono text-[15px] md:text-[18px] lg:text-[22px] text-[#CCFF00] font-bold uppercase tracking-wider">LUNES</span>
+                <span class="block font-technical-mono text-[11px] md:text-[13px] lg:text-[14px] text-gray-200 uppercase tracking-widest mt-1 font-semibold">HIBRIDFIT</span>
+              </th>
+              <th class="p-4 md:p-6 lg:p-7 border-r border-white/10">
+                <span class="block font-technical-mono text-[15px] md:text-[18px] lg:text-[22px] text-[#CCFF00] font-bold uppercase tracking-wider">MARTES</span>
+                <span class="block font-technical-mono text-[11px] md:text-[13px] lg:text-[14px] text-gray-200 uppercase tracking-widest mt-1 font-semibold">FUERZA FIT</span>
+              </th>
+              <th class="p-4 md:p-6 lg:p-7 border-r border-white/10">
+                <span class="block font-technical-mono text-[15px] md:text-[18px] lg:text-[22px] text-[#CCFF00] font-bold uppercase tracking-wider">MIÉRCOLES</span>
+                <span class="block font-technical-mono text-[11px] md:text-[13px] lg:text-[14px] text-gray-200 uppercase tracking-widest mt-1 font-semibold">IRONLEGS</span>
+              </th>
+              <th class="p-4 md:p-6 lg:p-7 border-r border-white/10">
+                <span class="block font-technical-mono text-[15px] md:text-[18px] lg:text-[22px] text-[#CCFF00] font-bold uppercase tracking-wider">JUEVES</span>
+                <span class="block font-technical-mono text-[11px] md:text-[13px] lg:text-[14px] text-gray-200 uppercase tracking-widest mt-1 font-semibold">HIBRIDFIT</span>
+              </th>
+              <th class="p-4 md:p-6 lg:p-7">
+                <span class="block font-technical-mono text-[15px] md:text-[18px] lg:text-[22px] text-[#CCFF00] font-bold uppercase tracking-wider">VIERNES</span>
+                <span class="block font-technical-mono text-[11px] md:text-[13px] lg:text-[14px] text-gray-200 uppercase tracking-widest mt-1 font-semibold">FUERZA FIT & PLUS</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/10 font-body-md text-sm md:text-base lg:text-lg">
+            
+            <!-- Fila 08:30 -->
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-4 md:p-6 lg:p-7 font-technical-mono text-[16px] md:text-[20px] lg:text-[24px] text-[#CCFF00] font-bold border-r border-white/10 bg-black/60 text-left">
+                08:30
+              </td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">FUERZA FIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">IRONLEGS</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 text-white font-medium">FUERZA FIT & PLUS</td>
+            </tr>
+
+            <!-- Fila 09:45 -->
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-4 md:p-6 lg:p-7 font-technical-mono text-[16px] md:text-[20px] lg:text-[24px] text-[#CCFF00] font-bold border-r border-white/10 bg-black/60 text-left">
+                09:45
+              </td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">FUERZA FIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">IRONLEGS</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 text-white font-medium">FUERZA FIT & PLUS</td>
+            </tr>
+
+            <!-- Fila 16:45 -->
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-4 md:p-6 lg:p-7 font-technical-mono text-[16px] md:text-[20px] lg:text-[24px] text-[#CCFF00] font-bold border-r border-white/10 bg-black/60 text-left">
+                16:45
+              </td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">FUERZA FIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">IRONLEGS</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 text-white font-medium">FUERZA FIT & PLUS</td>
+            </tr>
+
+            <!-- Fila 17:50 -->
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-4 md:p-6 lg:p-7 font-technical-mono text-[16px] md:text-[20px] lg:text-[24px] text-[#CCFF00] font-bold border-r border-white/10 bg-black/60 text-left">
+                17:50
+              </td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">FUERZA FIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">IRONLEGS</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 text-white font-medium">FUERZA FIT & PLUS</td>
+            </tr>
+
+            <!-- Fila 18:45 -->
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-4 md:p-6 lg:p-7 font-technical-mono text-[16px] md:text-[20px] lg:text-[24px] text-[#CCFF00] font-bold border-r border-white/10 bg-black/60 text-left">
+                18:45
+              </td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">FUERZA FIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">IRONLEGS</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 text-white font-medium">FUERZA FIT & PLUS</td>
+            </tr>
+
+            <!-- Fila 20:00 -->
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-4 md:p-6 lg:p-7 font-technical-mono text-[16px] md:text-[20px] lg:text-[24px] text-[#CCFF00] font-bold border-r border-white/10 bg-black/60 text-left">
+                20:00
+              </td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">FUERZA FIT</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">IRONLEGS</td>
+              <td class="p-4 md:p-6 lg:p-7 border-r border-white/10 text-white font-medium">HIBRIDFIT</td>
+              <td class="p-4 md:p-6 lg:p-7 text-white font-medium">FUERZA FIT & PLUS</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pt-2">
+        <p class="font-technical-mono text-secondary text-[12px] uppercase tracking-widest">
+          SÁBADOS: OPEN BOX Y COMMUNITY WOD // DOMINGOS: CERRADO
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Franja de transición revelando textura mármol fondo.png antes de la sección gris de instalaciones -->
+  <div class="w-full bg-texture-black py-8 md:py-12 pointer-events-none"></div>
+
+<section class="w-full bg-[#111418] py-space-3xl relative overflow-hidden" id="instalaciones">
+<!-- Subtle Carbon Texture Grid Background via SVG -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg class="w-full h-full" height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0h40v40H0z" fill="none"></path>
+<path d="M40 0H0v40h40V0zM1 1h38v38H1V1z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="relative z-10 max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter lg:gap-gutter-desktop">
+<!-- Metric 1 -->
+<div class="space-y-2 p-6 bg-[#0B0D0F] border-l-4 border-primary-container">
+<div class="font-stat-counter text-stat-counter-mobile lg:text-stat-counter text-[#F5F5F5] leading-none">
+            +2.500
+          </div>
+<p class="font-title-sm text-title-sm uppercase tracking-widest text-[#969AA0]">
+            SOCIOS ACTIVOS
+          </p>
+<span class="font-technical-mono text-technical-mono text-primary-container uppercase block pt-1">
+            COMUNIDAD DE RENDIMIENTO
+          </span>
+</div>
+<!-- Metric 2 -->
+<div class="space-y-2 p-6 bg-[#0B0D0F] border-l-4 border-surface-container-highest">
+<div class="font-stat-counter text-stat-counter-mobile lg:text-stat-counter text-[#F5F5F5] leading-none">
+            +50
+          </div>
+<p class="font-title-sm text-title-sm uppercase tracking-widest text-[#969AA0]">
+            CLASES SEMANALES
+          </p>
+<span class="font-technical-mono text-technical-mono text-secondary uppercase block pt-1">
+            CON COACHES CERTIFICADOS
+          </span>
+</div>
+<!-- Metric 3 (Accent) -->
+<div class="space-y-2 p-6 bg-[#0B0D0F] border-l-4 border-primary-container shadow-[0_0_25px_rgba(229,9,20,0.2)]">
+<div class="font-stat-counter text-stat-counter-mobile lg:text-stat-counter text-primary-container leading-none">
+            24/7
+          </div>
+<p class="font-title-sm text-title-sm uppercase tracking-widest text-[#F5F5F5]">
+            ACCESO TOTAL
+          </p>
+<span class="font-technical-mono text-technical-mono text-primary-container uppercase block pt-1">
+            365 DÍAS AL AÑO SIN LÍMITES
+          </span>
+</div>
+<!-- Metric 4 -->
+<div class="space-y-2 p-6 bg-[#0B0D0F] border-l-4 border-surface-container-highest">
+<div class="font-stat-counter text-stat-counter-mobile lg:text-stat-counter text-[#F5F5F5] leading-none">
+            1.200M²
+          </div>
+<p class="font-title-sm text-title-sm uppercase tracking-widest text-[#969AA0]">
+            INSTALACIÓN PURA
+          </p>
+<span class="font-technical-mono text-technical-mono text-secondary uppercase block pt-1">
+            CLIMATIZACIÓN CON FILTRO HEPA
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       PLANES Y TARIFAS (SUPERFICIES PREMIUM #111418 / #1A1E22)
+  =========================================== -->
+<section class="w-full bg-texture-black py-space-3xl relative" id="tarifas">
+<div class="max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="text-center max-w-2xl mx-auto space-y-4 mb-space-2xl">
+<span class="font-technical-mono text-technical-mono uppercase tracking-[0.25em] text-primary-container">MEMBRESÍAS DIRECTAS SIN LETRA PEQUEÑA</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl uppercase text-on-surface leading-none">
+          ELIGE TU NIVEL DE <span class="text-primary-container">COMPROMISO</span>
+</h2>
+<p class="font-body-md text-body-md text-secondary">
+          Todas nuestras membresías incluyen acceso completo al santuario con tecnología de apertura biométrica, lockers con código digital y app deportiva exclusiva.
+        </p>
+</div>
+<!-- Pricing Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<!-- Plan 1: Standard -->
+<div class="bg-[#111418] p-8 md:p-10 flex flex-col justify-between transition-all duration-300 hover:bg-[#15191E]">
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<span class="font-technical-mono text-technical-mono uppercase text-secondary tracking-widest">PLAN 01</span>
+<span class="px-2.5 py-1 bg-[#1A1E22] font-label-caps text-label-caps uppercase text-secondary">ACCESO BÁSICO</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface">STANDARD</h3>
+<div class="flex items-baseline gap-2 pt-2">
+<span class="font-stat-counter text-stat-counter text-[#F5F5F5] leading-none">59€</span>
+<span class="font-technical-mono text-technical-mono text-secondary uppercase">/ MES</span>
+</div>
+</div>
+<div class="w-full h-[1px] bg-surface-container-highest/40"></div>
+<ul class="space-y-3 font-body-sm text-body-sm text-secondary">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="">Acceso completo a sala fitness y peso libre</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="">Horario libre: 06:00 a 23:00 hrs</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="">Vestuarios ejecutivos con toalla incluida</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="">App FIT & PLUS para seguimiento de rutinas</span>
+</li>
+<li class="flex items-center gap-3 text-secondary/40">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span class="">Clases colectivas especializadas</span>
+</li>
+<li class="flex items-center gap-3 text-secondary/40">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span class="">Zona Recovery Lab y Crioterapia</span>
+</li>
+</ul>
+</div>
+<div class="pt-8">
+<button class="w-full py-4 bg-[#1A1E22] hover:bg-[#252a30] text-on-surface font-label-caps text-label-caps uppercase tracking-wider transition-colors">
+              SELECCIONAR STANDARD
+            </button>
+</div>
+</div>
+<!-- Plan 2: FIT & PLUS PRO (Highlighted & Prominent) -->
+<div class="relative bg-[#111418] p-8 md:p-10 flex flex-col justify-between shadow-[0_0_35px_rgba(229,9,20,0.35)] -my-2 lg:-my-4 z-10 border-t-4 border-primary-container">
+<!-- Top Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#E50914] text-white px-4 py-1 font-label-caps text-label-caps uppercase tracking-widest">
+            ★ MÁS ELEGIDO POR ATLETAS
+          </div>
+<div class="space-y-6 pt-2">
+<div class="flex items-center justify-between">
+<span class="font-technical-mono text-technical-mono uppercase text-primary-container tracking-widest">PLAN 02 // PRO PASS</span>
+<span class="px-2.5 py-1 bg-primary-container/20 text-primary-container font-label-caps text-label-caps uppercase">TODO INCLUIDO</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface">FIT & PLUS PRO</h3>
+<div class="flex items-baseline gap-2 pt-2">
+<span class="font-stat-counter text-stat-counter text-primary-container leading-none">89€</span>
+<span class="font-technical-mono text-technical-mono text-secondary uppercase">/ MES</span>
+</div>
+</div>
+<div class="w-full h-[1px] bg-primary-container/30"></div>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span class="font-medium">Acceso 24/7 sin restricción horaria</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span class="font-medium">Todas las clases colectivas ilimitadas</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span class="">Acceso semanal a Recovery Lab (Crio + Sauna)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span class="">Análisis de composición corporal InBody 770</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span class="">Pack de bienvenida FIT & PLUS (Bolsa + Shaker oficial)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span class="">1 pase de invitado gratis al mes</span>
+</li>
+</ul>
+</div>
+<div class="pt-8">
+<button class="w-full py-4 bg-[#E50914] hover:bg-[#FF1820] text-on-surface font-label-caps text-label-caps uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(229,9,20,0.4)]">
+              UNIRME A FIT & PLUS PRO →
+            </button>
+</div>
+</div>
+<!-- Plan 3: VIP / Black -->
+<div class="bg-[#111418] p-8 md:p-10 flex flex-col justify-between transition-all duration-300 hover:bg-[#15191E]">
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<span class="font-technical-mono text-technical-mono uppercase text-secondary tracking-widest">PLAN 03</span>
+<span class="px-2.5 py-1 bg-[#1A1E22] font-label-caps text-label-caps uppercase text-secondary">ALTO RENDIMIENTO</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface">VIP / BLACK</h3>
+<div class="flex items-baseline gap-2 pt-2">
+<span class="font-stat-counter text-stat-counter text-[#F5F5F5] leading-none">139€</span>
+<span class="font-technical-mono text-technical-mono text-secondary uppercase">/ MES</span>
+</div>
+</div>
+<div class="w-full h-[1px] bg-surface-container-highest/40"></div>
+<ul class="space-y-3 font-body-sm text-body-sm text-secondary">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="text-on-surface font-medium">Todo lo incluido en el Plan PRO</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="text-on-surface font-medium">4 Sesiones individuales con Coach Personal</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="">Plan nutricional deportivo individualizado</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="">Taquilla privada permanente con recarga eléctrica</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="">Servicio de lavandería de indumentaria de entreno</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="">Pases ilimitados para invitados</span>
+</li>
+</ul>
+</div>
+<div class="pt-8">
+<button class="w-full py-4 bg-[#1A1E22] hover:bg-[#252a30] text-on-surface font-label-caps text-label-caps uppercase tracking-wider transition-colors">
+              SOLICITAR ACCESO BLACK
+            </button>
+</div>
+</div>
+</div>
+<!-- No Binding Clause Note -->
+<div class="text-center pt-10">
+<p class="font-technical-mono text-technical-mono text-secondary uppercase tracking-widest">
+          SIN PERMANENCIA FORZADA · CANCELACIÓN CON UN CLIC DESDE TU ÁREA DE SOCIO
+        </p>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       GALERÍA EDITORIAL & SINTONÍA VISUAL
+  =========================================== -->
+<section class="w-full bg-[#0B0D0F] py-space-3xl relative overflow-hidden" id="galeria">
+<div class="max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="flex items-center justify-between pb-8">
+<div>
+<span class="font-technical-mono text-technical-mono uppercase tracking-[0.25em] text-primary-container">VISUAL GALLERY</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface leading-none mt-1">EL ARTE DEL ESFUERZO</h2>
+</div>
+<span class="hidden sm:inline-block font-headline-xl text-[72px] text-white/5 uppercase select-none pointer-events-none">#FITANDPLUSMADRID</span>
+</div>
+<!-- Editorial Discontinuous Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="relative group overflow-hidden bg-black aspect-[3/4]">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-all duration-500" data-alt="Close up of weight plates loaded onto barbell on floor with intense chalk powder dispersion, high contrast athletic mood" src="assets/images/gallery-barbell.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline-md text-headline-md uppercase text-white/80 group-hover:text-primary-container transition-colors">TRAIN</span>
+</div>
+</div>
+<div class="relative group overflow-hidden bg-black aspect-[3/4] md:translate-y-6">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-all duration-500" data-alt="Athletic male back muscles dripping sweat during intense pull up repetition under dark dramatic lighting" src="assets/images/gallery-back.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline-md text-headline-md uppercase text-white/80 group-hover:text-primary-container transition-colors">MOVE</span>
+</div>
+</div>
+<div class="relative group overflow-hidden bg-black aspect-[3/4]">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-all duration-500" data-alt="Close up portrait of a focused athlete breathing deeply with perspiration, intense eyes, high key shadows and red rim light" src="assets/images/gallery-portrait.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline-md text-headline-md uppercase text-white/80 group-hover:text-primary-container transition-colors">PUSH</span>
+</div>
+</div>
+<div class="relative group overflow-hidden bg-black aspect-[3/4] md:translate-y-6">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-all duration-500" data-alt="Row of heavy black kettlebells lined up perfectly on industrial gym floor with dramatic laser red horizon light" src="assets/images/gallery-kettlebells.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline-md text-headline-md uppercase text-white/80 group-hover:text-primary-container transition-colors">REPEAT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       CTA FINAL CINEMATOGRÁFICO
+  =========================================== -->
+<section class="relative w-full min-h-[75vh] flex items-center justify-center bg-texture-black overflow-hidden py-space-3xl">
+<!-- Background Hero with Intense Dramatic Vignette -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-center filter brightness-[0.4] contrast-[1.25]" data-alt="Full shot of an athletic muscular champion standing in the dark center of empty stadium gym with head slightly lowered in pure mental focus, moody smoke, blood red backlighting with hard silhouettes" src="assets/images/cta-champion.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-[#050505]"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(229,9,20,0.18)_0%,transparent_70%)]"></div>
+</div>
+<!-- Secondary Angled Kinetic Accent Ribbon Slice -->
+<div class="absolute -left-10 right-0 top-1/2 -translate-y-1/2 w-[110%] h-1 bg-gradient-to-r from-transparent via-[#E50914] to-transparent transform -rotate-3 pointer-events-none opacity-40"></div>
+<!-- Content Center Stage -->
+<div class="relative z-10 max-w-4xl mx-auto px-margin text-center space-y-8">
+<div class="inline-flex items-center gap-3 bg-[#111418]/90 px-4 py-1.5 border-l-2 border-primary-container">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-technical-mono text-technical-mono uppercase tracking-[0.25em] text-on-surface">CONVOCATORIA ABIERTA · PLAZAS LIMITADAS</span>
+</div>
+<h2 class="font-display-hero text-display-hero-mobile md:text-display-hero uppercase text-[#F5F5F5] leading-[0.88] tracking-tight">
+        TU PRÓXIMO NIVEL<br>
+<span class="text-primary-container drop-shadow-[0_0_35px_rgba(229,9,20,0.6)]">EMPIEZA AQUÍ.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl mx-auto leading-relaxed">
+        No dejes tu acondicionamiento al azar. Únete al colectivo de rendimiento físico que redefine los estándares de la disciplina atlética.
+      </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-3 font-label-caps text-label-caps uppercase bg-[#E50914] hover:bg-[#FF1820] text-on-surface px-10 py-5 transition-all duration-300 shadow-[0_0_35px_rgba(229,9,20,0.5)] hover:shadow-[0_0_50px_rgba(255,24,32,0.8)] hover:-translate-y-1" data-path="tarifas" href="#tarifas">
+<span class="">ÚNETE AHORA →</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center font-label-caps text-label-caps uppercase bg-[#111418] hover:bg-[#1A1E22] text-secondary hover:text-on-surface px-8 py-5 transition-colors border-l border-white/20" data-path="contacto" href="#contacto">
+          SOLICITAR DÍA DE PRUEBA
+        </a>
+</div>
+<div class="flex items-center justify-center gap-6 pt-4 text-secondary font-technical-mono text-technical-mono uppercase">
+<span class="flex items-center gap-1.5"><span class="text-primary-container">✓</span> SIN PERMANENCIA</span>
+<span class="">·</span>
+<span class="flex items-center gap-1.5"><span class="text-primary-container">✓</span> APP INCLUIDA</span>
+<span class="">·</span>
+<span class="flex items-center gap-1.5"><span class="text-primary-container">✓</span> ACCESO INMEDIATO</span>
+</div>
+</div>
+</section>
+</div>
+</main><footer id="contacto" class="w-full bg-texture-black border-t border-white/10"><div class="max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-space-3xl pb-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter lg:gap-gutter-desktop pb-space-2xl border-b border-surface-container-highest/40"><div class="lg:col-span-4 space-y-space-md"><div class="flex items-center gap-3"><img alt="FIT & PLUS Logo" class="h-9 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.png"><span class="font-headline-md text-headline-md tracking-wider uppercase text-on-surface">FIT & PLUS</span></div><p class="font-body-md text-body-md text-secondary max-w-sm">Santuario de alto rendimiento físico y optimización atlética. Diseñado sin concesiones para quienes redefinen sus límites absolutos cada día.</p><div class="flex items-center gap-3 pt-space-xs"><span class="inline-block w-2.5 h-2.5 bg-primary-container animate-pulse"></span><span class="font-technical-mono text-technical-mono uppercase text-secondary-fixed-dim">CENTRO OFICIAL DE ÉLITE • MADRID</span></div></div><div class="lg:col-span-2 space-y-space-md"><h3 class="font-title-sm text-title-sm uppercase text-on-surface tracking-wider">NAVEGACIÓN</h3><ul class="space-y-space-sm"><li class="font-body-sm text-body-sm"><a class="text-secondary hover:text-primary-container transition-colors uppercase" data-path="inicio" href="#inicio">Inicio</a></li><li class="font-body-sm text-body-sm"><a class="text-secondary hover:text-primary-container transition-colors uppercase" data-path="instalaciones" href="#instalaciones">Instalaciones</a></li><li class="font-body-sm text-body-sm"><a class="text-secondary hover:text-primary-container transition-colors uppercase" data-path="horarios" href="#">Cronograma</a></li><li class="font-body-sm text-body-sm"><a class="text-secondary hover:text-primary-container transition-colors uppercase" data-path="tarifas" href="#tarifas">Membresías</a></li></ul></div><div class="lg:col-span-3 space-y-space-md"><h3 class="font-title-sm text-title-sm uppercase text-on-surface tracking-wider">HORARIOS DEL CLUB</h3><div class="space-y-space-sm"><div class="bg-[#111418] p-space-sm border-l-2 border-primary-container"><p class="font-label-caps text-label-caps uppercase text-secondary">Lunes a Viernes</p><p class="font-technical-mono text-technical-mono text-on-surface">06:00 - 23:00 HRS</p></div><div class="bg-[#111418] p-space-sm border-l-2 border-secondary-container"><p class="font-label-caps text-label-caps uppercase text-secondary">Sábados y Domingos</p><p class="font-technical-mono text-technical-mono text-on-surface">08:00 - 21:00 HRS</p></div></div></div><div class="lg:col-span-3 space-y-space-md"><h3 class="font-title-sm text-title-sm uppercase text-on-surface tracking-wider">SANCTUARY LOCATIONS</h3><p class="font-body-sm text-body-sm text-secondary">Av. de la Castellana 182, Performance District<br>28046 Madrid, España</p><p class="font-technical-mono text-technical-mono text-primary-container">INFO@FITANDPLUS.ES<br>+34 910 882 400</p></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><p class="font-technical-mono text-technical-mono uppercase text-secondary-fixed-dim">© 2025 FIT & PLUS. TODOS LOS DERECHOS RESERVADOS.</p><div class="flex items-center gap-space-lg font-technical-mono text-technical-mono uppercase text-secondary-fixed-dim"><a class="hover:text-on-surface transition-colors" href="#">TÉRMINOS</a><a class="hover:text-on-surface transition-colors" href="#">PRIVACIDAD</a><a class="hover:text-on-surface transition-colors" href="#">REGLAMENTO INTERNO</a></div></div></div></footer>
+
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div id="mobile-drawer" class="mobile-nav-drawer closed fixed inset-0 z-50 bg-texture-black flex flex-col justify-between p-8 xl:hidden">
+    <div class="flex items-center justify-between border-b border-white/10 pb-6">
+      <div class="flex items-center gap-3">
+        <img alt="FIT & PLUS Logo" class="h-8 w-auto filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.png">
+        <span class="font-headline-md text-[22px] tracking-wider uppercase text-on-surface">FIT & PLUS</span>
+      </div>
+      <button id="mobile-menu-close" aria-label="Cerrar menú" class="p-2 text-white hover:text-primary-container">
+        <span class="material-symbols-outlined text-[32px]">close</span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links flex flex-col gap-6 py-8">
+      <a class="font-headline-lg text-2xl uppercase tracking-wider text-on-surface hover:text-primary-container transition-colors" data-path="inicio" href="#inicio">01. INICIO</a>
+      <a class="font-headline-lg text-2xl uppercase tracking-wider text-secondary hover:text-[#CCFF00] transition-colors" data-path="cronograma" href="#cronograma">02. CRONOGRAMA</a>
+      
+      <a class="font-headline-lg text-2xl uppercase tracking-wider text-secondary hover:text-primary-container transition-colors" data-path="instalaciones" href="#instalaciones">04. INSTALACIONES</a>
+      <a class="font-headline-lg text-2xl uppercase tracking-wider text-secondary hover:text-primary-container transition-colors" data-path="tarifas" href="#tarifas">05. TARIFAS</a>
+      <a class="font-headline-lg text-2xl uppercase tracking-wider text-secondary hover:text-primary-container transition-colors" data-path="galeria" href="#galeria">06. GALERÍA</a>
+      <a class="font-headline-lg text-2xl uppercase tracking-wider text-secondary hover:text-primary-container transition-colors" data-path="contacto" href="#contacto">07. CONTACTO</a>
+    </nav>
+
+    <div class="pt-6 border-t border-white/10">
+      <a class="w-full inline-flex items-center justify-center font-label-caps text-label-caps uppercase bg-[#E50914] text-on-surface py-4 shadow-[0_0_25px_rgba(229,9,20,0.5)]" href="#tarifas">
+        [ ÚNETE AL CLUB AHORA ]
+      </a>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" aria-label="Volver arriba" class="fixed bottom-6 left-6 z-40 bg-[#111418]/90 hover:bg-[#E50914] text-white p-3 border border-white/10 shadow-2xl transition-all duration-300 opacity-0 pointer-events-none group">
+    <span class="material-symbols-outlined text-[24px] block transition-transform group-hover:-translate-y-0.5">arrow_upward</span>
+  </button>
+
+  <!-- Interactive JavaScript Logic -->
+  <script src="js/main.js"></script>
+</body></html>
