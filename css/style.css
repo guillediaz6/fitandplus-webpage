@@ -187,7 +187,7 @@
 }
 
 /* ==========================================================================
-   SECCIÓN HORARIOS - GYM2 EN PC (PARALLAX NATIVO) / GYM1 EN MÓVIL
+   SECCIÓN HORARIOS - GYM2 EN PC (PARALLAX NATIVO) / FONDOHORARIO EN MÓVIL (100% ANCHO + MOSAICO VERTICAL)
    ========================================================================== */
 
 /* 1. DESKTOP / PC (>= 1025px): Pure Native CSS Parallax Gym2 */
@@ -203,10 +203,13 @@
   }
 }
 
-/* 2. MOBILE & TABLETS (<= 1024px): Fondo transparente para capa gym1 estática */
+/* 2. MOBILE & TABLETS (<= 1024px): fondohorario.jpg al 100% de ancho sin recortar, repetida verticalmente sin filtros */
 @media (max-width: 1024px) {
   #horarios {
-    background: transparent;
+    background-image: url('../assets/images/fondohorario.jpg');
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: top center;
   }
 }
 
