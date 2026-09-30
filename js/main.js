@@ -232,14 +232,15 @@ function initParallax() {
     const winHeight = window.innerHeight || document.documentElement.clientHeight;
 
     // Check if section is visible in or near viewport
-    if (rect.bottom > -200 && rect.top < winHeight + 200) {
+    if (rect.bottom > -300 && rect.top < winHeight + 300) {
       // Progress from 0 (section entering from bottom) to 1 (section exiting at top)
       const totalDist = winHeight + rect.height;
       const currentDist = winHeight - rect.top;
       const progress = Math.max(0, Math.min(1, currentDist / totalDist));
       
-      // Amplified travel range: layer has 60% extra height (top: -30%, height: 160%)
-      const maxOffset = 150;
+      // Amplified travel range: layer has 90% extra height (top: -45%, height: 190%)
+      // Moves significantly faster and reveals substantially more of the gym interior
+      const maxOffset = 260;
       const yOffset = (progress - 0.5) * (maxOffset * 2);
 
       layer.style.transform = `translate3d(0, ${yOffset.toFixed(1)}px, 0)`;
