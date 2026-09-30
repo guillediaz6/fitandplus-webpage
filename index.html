@@ -249,34 +249,35 @@
     </div>
   </section>
 
-  <!-- 2. SECCIÓN HORARIOS FULL-WIDTH INDEPENDIENTE (PARALLAX CINEMATOGRÁFICO MÓVIL Y ESCRITORIO) -->
-  <section id="horarios" class="relative overflow-hidden w-full py-40 md:py-60 border-y border-white/10 shadow-[0_0_80px_rgba(0,0,0,0.95)]">
+  <!-- 2. SECCIÓN HORARIOS FULL-WIDTH INDEPENDIENTE (PARALLAX GYM2 EN PC / GYM1 EN MÓVIL) -->
+  <section id="horarios" class="relative overflow-hidden w-full py-28 md:py-60 border-y border-white/10 shadow-[0_0_80px_rgba(0,0,0,0.95)]">
     
-    <!-- Parallax Image Layer (Hardware Accelerated & Nítido en móvil y PC) -->
-    <div class="parallax-layer absolute left-0 right-0 w-full pointer-events-none z-0" style="top: -45%; height: 190%; will-change: transform;">
-      <img src="assets/images/gym2.jpg" alt="Fit & Plus Gym Interior" class="w-full h-full object-cover object-[20%_center] md:object-center filter brightness-[0.75] contrast-[1.1]">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#050505]/90 via-[#050505]/45 to-[#050505]/95"></div>
+    <!-- Fondo Móvil Estático Gym1 Completo (Vertical, Nítido, Sin Parallax) -->
+    <div class="absolute inset-0 w-full h-full z-0 lg:hidden pointer-events-none overflow-hidden">
+      <img src="assets/images/gym1.webp" alt="FIT & PLUS Sala de Entrenamiento" class="w-full h-full object-cover object-center filter brightness-[0.50] contrast-[1.2]">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#050505]/95 via-[#050505]/55 to-[#050505]/95"></div>
     </div>
     
-    <!-- Capa de contenido de Horarios centrada encima del fondo parallax -->
-    <div class="relative z-10 max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop text-center space-y-12">
+    <!-- Capa de contenido de Horarios centrada encima del fondo -->
+    <div class="relative z-10 max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop text-center space-y-10 md:space-y-12">
       
-      <!-- Badge y Título Enorme (Sin Subtítulo) -->
+      <!-- Badge y Título Enorme -->
       <div class="space-y-4 max-w-4xl mx-auto">
-        <div class="inline-flex items-center gap-3 bg-black/85 px-5 py-2 border-l-2 border-[#CCFF00] shadow-[0_0_20px_rgba(204,255,0,0.35)]">
+        <div class="inline-flex items-center gap-3 bg-black/90 backdrop-blur-md px-5 py-2.5 border-l-4 border-[#CCFF00] shadow-[0_10px_30px_rgba(0,0,0,0.85),0_0_20px_rgba(204,255,0,0.25)] rounded-r-lg md:rounded-none">
           <span class="w-2.5 h-2.5 rounded-full bg-[#CCFF00] animate-pulse shadow-[0_0_12px_#CCFF00]"></span>
-          <span class="font-technical-mono text-technical-mono uppercase tracking-[0.25em] text-[#CCFF00] text-xs md:text-sm">CUADRANTE OFICIAL DE SESIONES</span>
+          <span class="font-technical-mono text-technical-mono uppercase tracking-[0.25em] text-[#CCFF00] text-xs md:text-sm font-bold">CUADRANTE OFICIAL DE SESIONES</span>
           <span class="px-2 py-0.5 bg-[#CCFF00]/10 border border-[#CCFF00]/40 text-[#CCFF00] font-technical-mono text-[10px] md:text-xs tracking-widest uppercase">LIVE SCHEDULE</span>
         </div>
 
-        <h3 class="font-headline-xl text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase text-white leading-none tracking-tight">
+        <h3 class="font-headline-xl text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase text-white leading-none tracking-tight drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
           HORARIO <span class="text-[#CCFF00] drop-shadow-[0_0_35px_rgba(204,255,0,0.5)]">SEMANAL</span>
         </h3>
       </div>
 
-      <!-- Tabla Clásica de Horarios Agrandada para PC y Portátil -->
-      <div class="overflow-x-auto pb-4 max-w-6xl xl:max-w-7xl mx-auto">
-        <table class="w-full text-center border-collapse bg-black/85 backdrop-blur-md border border-white/20 shadow-[0_0_50px_rgba(0,0,0,0.9)]">
+      <!-- Tabla Clásica de Horarios en Relieve Flotante -->
+      <div class="max-w-6xl xl:max-w-7xl mx-auto p-2 sm:p-4 md:p-6 bg-black/85 backdrop-blur-xl border border-white/20 hover:border-[#CCFF00]/50 shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_40px_rgba(204,255,0,0.18)] ring-1 ring-white/10 rounded-2xl md:rounded-none transition-all duration-300">
+        <div class="overflow-x-auto pb-2">
+          <table class="w-full text-center border-collapse bg-black/60 border border-white/15">
           <thead>
             <tr class="border-b-2 border-[#CCFF00] bg-black/95">
               <th class="p-4 md:p-6 lg:p-7 font-technical-mono text-[13px] md:text-[16px] lg:text-[18px] text-gray-400 uppercase tracking-widest border-r border-white/10 text-left w-24 md:w-36 lg:w-44">
@@ -381,6 +382,7 @@
           </tbody>
         </table>
       </div>
+    </div>
 
       <div class="pt-2">
         <p class="font-technical-mono text-secondary text-[12px] uppercase tracking-widest">

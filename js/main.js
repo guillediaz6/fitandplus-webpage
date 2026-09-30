@@ -218,50 +218,12 @@ function initBackToTop() {
 }
 
 /**
- * Parallax Background Movement on Scroll (Mobile & Desktop)
+ * Parallax Background Handling
+ * Desktop: Pure native CSS background-attachment: fixed (Gym2)
+ * Mobile: Static vertical Gym1 image with floating relief schedule
  */
 function initParallax() {
-  const section = document.getElementById('horarios');
-  const layer = section?.querySelector('.parallax-layer');
-  if (!section || !layer) return;
-
-  let ticking = false;
-
-  function update() {
-    // Desktop (>= 1025px) uses pure native CSS background-attachment: fixed
-    if (window.innerWidth > 1024) return;
-
-    const rect = section.getBoundingClientRect();
-    const winHeight = window.innerHeight || document.documentElement.clientHeight;
-
-    // Check if section is visible in or near viewport
-    if (rect.bottom > -300 && rect.top < winHeight + 300) {
-      // Progress from 0 (section entering from bottom) to 1 (section exiting at top)
-      const totalDist = winHeight + rect.height;
-      const currentDist = winHeight - rect.top;
-      const progress = Math.max(0, Math.min(1, currentDist / totalDist));
-      
-      // Amplified travel range: layer has 90% extra height (top: -45%, height: 190%)
-      // Moves significantly faster and reveals substantially more of the gym interior
-      const maxOffset = 260;
-      const yOffset = (progress - 0.5) * (maxOffset * 2);
-
-      layer.style.transform = `translate3d(0, ${yOffset.toFixed(1)}px, 0)`;
-    }
-    ticking = false;
-  }
-
-  function requestTick() {
-    if (!ticking) {
-      window.requestAnimationFrame(update);
-      ticking = true;
-    }
-  }
-
-  window.addEventListener('scroll', requestTick, { passive: true });
-  window.addEventListener('touchmove', requestTick, { passive: true });
-  window.addEventListener('resize', requestTick, { passive: true });
-  update();
+  // Pure native CSS background-attachment: fixed on desktop handles parallax effortlessly.
 }
 
 

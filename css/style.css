@@ -187,10 +187,10 @@
 }
 
 /* ==========================================================================
-   PARALLAX GYM2 - DUAL DESKTOP & MOBILE ARCHITECTURE
+   SECCIÓN HORARIOS - GYM2 EN PC (PARALLAX NATIVO) / GYM1 EN MÓVIL
    ========================================================================== */
 
-/* 1. DESKTOP / PC (>= 1025px): Pure Native CSS Parallax (Flawless, Sharp & Fixed) */
+/* 1. DESKTOP / PC (>= 1025px): Pure Native CSS Parallax Gym2 */
 @media (min-width: 1025px) {
   #horarios {
     background-image: 
@@ -201,28 +201,12 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  #horarios .parallax-layer {
-    display: none !important;
-  }
 }
 
-/* 2. MOBILE & TABLETS (<= 1024px): Hardware-Accelerated Dynamic Layer */
+/* 2. MOBILE & TABLETS (<= 1024px): Fondo transparente para capa gym1 estática */
 @media (max-width: 1024px) {
   #horarios {
     background: transparent;
-  }
-  .parallax-layer {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    top: -45%;
-    height: 190%;
-    pointer-events: none;
-    z-index: 0;
-    will-change: transform;
-    transform: translate3d(0, 0, 0);
   }
 }
 
