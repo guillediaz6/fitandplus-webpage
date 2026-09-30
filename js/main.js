@@ -3,15 +3,21 @@
  * Handles navigation, interactive filters, mobile drawer, toasts and smooth scrolling.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  initNavbar();
-  initMobileMenu();
-  initSmoothScroll();
-  initScheduleInteractions();
-  initMembershipButtons();
-  initBackToTop();
-  initParallax();
-});
+function initApp() {
+  try { initNavbar(); } catch (e) { console.error('Navbar init error:', e); }
+  try { initMobileMenu(); } catch (e) { console.error('MobileMenu init error:', e); }
+  try { initSmoothScroll(); } catch (e) { console.error('SmoothScroll init error:', e); }
+  try { initScheduleInteractions(); } catch (e) { console.error('Schedule init error:', e); }
+  try { initMembershipButtons(); } catch (e) { console.error('Membership init error:', e); }
+  try { initBackToTop(); } catch (e) { console.error('BackToTop init error:', e); }
+  try { initParallax(); } catch (e) { console.error('Parallax init error:', e); }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 /**
  * Toast Notification Utility
@@ -163,7 +169,6 @@ function initScheduleInteractions() {
   // Action cards reservation button click
   const reserveButtons = document.querySelectorAll('#cronograma .group, #clases .group');
   reserveButtons.forEach(card => {
-    const reserveLink = card.querySelector('span:contains("RESERVAR"), .text-secondary');
     card.addEventListener('click', (e) => {
       // If not clicking a specific sub-button
       if (e.target.tagName !== 'SPAN' || !e.target.classList.contains('cursor-pointer')) {
@@ -224,17 +229,17 @@ function initParallax() {
 
   function update() {
     const rect = section.getBoundingClientRect();
-    const winHeight = window.innerHeight;
+    const winHeight = window.innerHeight || document.documentElement.clientHeight;
 
     // Check if section is visible in or near viewport
-    if (rect.bottom > -100 && rect.top < winHeight + 100) {
+    if (rect.bottom > -200 && rect.top < winHeight + 200) {
       // Progress from 0 (section entering from bottom) to 1 (section exiting at top)
       const totalDist = winHeight + rect.height;
       const currentDist = winHeight - rect.top;
       const progress = Math.max(0, Math.min(1, currentDist / totalDist));
       
-      // Smooth travel range: layer has 50% extra height (top: -25%, height: 150%)
-      const maxOffset = 120;
+      // Amplified travel range: layer has 60% extra height (top: -30%, height: 160%)
+      const maxOffset = 150;
       const yOffset = (progress - 0.5) * (maxOffset * 2);
 
       layer.style.transform = `translate3d(0, ${yOffset.toFixed(1)}px, 0)`;
@@ -242,14 +247,16 @@ function initParallax() {
     ticking = false;
   }
 
-  window.addEventListener('scroll', () => {
+  function requestTick() {
     if (!ticking) {
       window.requestAnimationFrame(update);
       ticking = true;
     }
-  }, { passive: true });
+  }
 
-  window.addEventListener('resize', update, { passive: true });
+  window.addEventListener('scroll', requestTick, { passive: true });
+  window.addEventListener('touchmove', requestTick, { passive: true });
+  window.addEventListener('resize', requestTick, { passive: true });
   update();
 }
 
