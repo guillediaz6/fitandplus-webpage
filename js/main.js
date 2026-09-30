@@ -228,6 +228,9 @@ function initParallax() {
   let ticking = false;
 
   function update() {
+    // Desktop (>= 1025px) uses pure native CSS background-attachment: fixed
+    if (window.innerWidth > 1024) return;
+
     const rect = section.getBoundingClientRect();
     const winHeight = window.innerHeight || document.documentElement.clientHeight;
 

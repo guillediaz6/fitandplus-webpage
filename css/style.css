@@ -186,18 +186,44 @@
   background-repeat: no-repeat;
 }
 
-/* Parallax Layer Styling (Smooth, GPU-accelerated across Mobile & Desktop) */
-.parallax-layer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  top: -45%;
-  height: 190%;
-  pointer-events: none;
-  z-index: 0;
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
+/* ==========================================================================
+   PARALLAX GYM2 - DUAL DESKTOP & MOBILE ARCHITECTURE
+   ========================================================================== */
+
+/* 1. DESKTOP / PC (>= 1025px): Pure Native CSS Parallax (Flawless, Sharp & Fixed) */
+@media (min-width: 1025px) {
+  #horarios {
+    background-image: 
+      linear-gradient(to bottom, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.40) 50%, rgba(5, 5, 5, 0.90) 100%),
+      url('../assets/images/gym2.jpg');
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #horarios .parallax-layer {
+    display: none !important;
+  }
+}
+
+/* 2. MOBILE & TABLETS (<= 1024px): Hardware-Accelerated Dynamic Layer */
+@media (max-width: 1024px) {
+  #horarios {
+    background: transparent;
+  }
+  .parallax-layer {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: -45%;
+    height: 190%;
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 
