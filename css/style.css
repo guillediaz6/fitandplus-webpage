@@ -198,6 +198,14 @@
   background-size: cover;
 }
 
+/* Fix mobile parallax blur/zoom bug (iOS Safari and mobile browsers don't support fixed well) */
+@media (max-width: 1024px) {
+  .parallax-gym2 {
+    background-attachment: scroll;
+    background-position: center center;
+  }
+}
+
 
 
 
