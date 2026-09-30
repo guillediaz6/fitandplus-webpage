@@ -249,8 +249,14 @@
     </div>
   </section>
 
-  <!-- 2. SECCIÓN HORARIOS FULL-WIDTH INDEPENDIENTE (PARALLAX PURO GYM2 AL BAJAR/SUBIR) -->
-  <section id="horarios" class="parallax-gym2 w-full py-40 md:py-60 border-y border-white/10 shadow-[0_0_80px_rgba(0,0,0,0.95)]">
+  <!-- 2. SECCIÓN HORARIOS FULL-WIDTH INDEPENDIENTE (PARALLAX CINEMATOGRÁFICO MÓVIL Y ESCRITORIO) -->
+  <section id="horarios" class="relative overflow-hidden w-full py-40 md:py-60 border-y border-white/10 shadow-[0_0_80px_rgba(0,0,0,0.95)]">
+    
+    <!-- Parallax Image Layer (Hardware Accelerated & Nítido en móvil y PC) -->
+    <div class="parallax-layer absolute left-0 right-0 w-full pointer-events-none -z-0" style="top: -25%; height: 150%; will-change: transform;">
+      <img src="assets/images/gym2.jpg" alt="Fit & Plus Gym Interior" class="w-full h-full object-cover object-center filter brightness-[0.75] contrast-[1.1]">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#050505]/90 via-[#050505]/45 to-[#050505]/95"></div>
+    </div>
     
     <!-- Capa de contenido de Horarios centrada encima del fondo parallax -->
     <div class="relative z-10 max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop text-center space-y-12">

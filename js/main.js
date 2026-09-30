@@ -213,11 +213,44 @@ function initBackToTop() {
 }
 
 /**
- * Parallax Background Movement on Scroll
+ * Parallax Background Movement on Scroll (Mobile & Desktop)
  */
 function initParallax() {
-  // Pure native CSS background-attachment: fixed provides seamless 60fps parallax
-  // across all modern desktop/laptop browsers with zero jitter or script dependency.
+  const section = document.getElementById('horarios');
+  const layer = section?.querySelector('.parallax-layer');
+  if (!section || !layer) return;
+
+  let ticking = false;
+
+  function update() {
+    const rect = section.getBoundingClientRect();
+    const winHeight = window.innerHeight;
+
+    // Check if section is visible in or near viewport
+    if (rect.bottom > -100 && rect.top < winHeight + 100) {
+      // Progress from 0 (section entering from bottom) to 1 (section exiting at top)
+      const totalDist = winHeight + rect.height;
+      const currentDist = winHeight - rect.top;
+      const progress = Math.max(0, Math.min(1, currentDist / totalDist));
+      
+      // Smooth travel range: layer has 50% extra height (top: -25%, height: 150%)
+      const maxOffset = 120;
+      const yOffset = (progress - 0.5) * (maxOffset * 2);
+
+      layer.style.transform = `translate3d(0, ${yOffset.toFixed(1)}px, 0)`;
+    }
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', update, { passive: true });
+  update();
 }
 
 
