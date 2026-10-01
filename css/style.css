@@ -203,13 +203,15 @@
   }
 }
 
-/* 2. MOBILE & TABLETS (<= 1024px): fondohorario.jpg al 100% de ancho sin recortar, repetida verticalmente sin filtros */
+/* 2. MOBILE & TABLETS (<= 1024px): fondohorario.jpg ajustado sin repetición, recortado arriba y extendido abajo con degradado negro al final */
 @media (max-width: 1024px) {
   #horarios {
-    background-image: url('../assets/images/fondohorario.jpg');
-    background-repeat: repeat-y;
-    background-size: 100% auto;
-    background-position: top center;
+    background-image: 
+      linear-gradient(to bottom, rgba(5, 5, 5, 0.50) 0%, transparent 20%, transparent 80%, rgba(5, 5, 5, 1) 100%),
+      url('../assets/images/fondohorario.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
   }
 }
 
