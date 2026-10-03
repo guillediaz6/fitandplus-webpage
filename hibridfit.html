@@ -27,11 +27,10 @@
 
       <nav class="hidden xl:flex items-center gap-8">
         <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-on-surface transition-colors py-2" href="index.html#inicio">INICIO</a>
-        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-[#CCFF00] transition-colors py-2" href="index.html#cronograma">CRONOGRAMA</a>
-        <a class="font-label-caps text-[14px] uppercase text-on-surface border-b-2 border-[#CCFF00] tracking-widest transition-colors py-2 font-bold" href="index.html#cronograma">ENTRENAMIENTOS</a>
+        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-[#CCFF00] transition-colors py-2" href="index.html#cronograma">PROGRAMA SEMANAL</a>
         <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-on-surface transition-colors py-2" href="index.html#tarifas">TARIFAS</a>
-        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-on-surface transition-colors py-2" href="index.html#galeria">GALERÍA</a>
-        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-on-surface transition-colors py-2" href="index.html#contacto">CONTACTO</a>
+        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-on-surface transition-colors py-2" href="index.html#resenas">RESEÑAS</a>
+        <a class="font-label-caps text-[14px] uppercase text-secondary tracking-widest hover:text-on-surface transition-colors py-2" href="contacto.html">CONTACTO</a>
       </nav>
 
       <div class="flex items-center gap-4">
@@ -163,7 +162,7 @@
 
     <nav class="mobile-nav-links flex flex-col gap-4 py-6 overflow-y-auto">
       <a class="font-headline-lg text-xl uppercase tracking-wider text-on-surface hover:text-primary-container transition-colors" href="index.html#inicio">01. INICIO</a>
-      <a class="font-headline-lg text-xl uppercase tracking-wider text-secondary hover:text-[#CCFF00] transition-colors" href="index.html#cronograma">02. CRONOGRAMA</a>
+      <a class="font-headline-lg text-xl uppercase tracking-wider text-secondary hover:text-[#CCFF00] transition-colors" href="index.html#cronograma">02. PROGRAMA SEMANAL</a>
       
       <div class="flex flex-col gap-2 pt-2 border-t border-white/10">
         <span class="font-technical-mono text-xs uppercase text-[#CCFF00] tracking-widest font-bold">03. ENTRENAMIENTOS</span>
@@ -174,8 +173,8 @@
       </div>
 
       <a class="font-headline-lg text-xl uppercase tracking-wider text-secondary hover:text-primary-container transition-colors pt-2 border-t border-white/10" href="index.html#tarifas">04. TARIFAS</a>
-      <a class="font-headline-lg text-xl uppercase tracking-wider text-secondary hover:text-primary-container transition-colors" href="index.html#galeria">05. GALERÍA</a>
-      <a class="font-headline-lg text-xl uppercase tracking-wider text-secondary hover:text-primary-container transition-colors" href="index.html#contacto">06. CONTACTO</a>
+      <a class="font-headline-lg text-xl uppercase tracking-wider text-secondary hover:text-primary-container transition-colors" href="index.html#resenas">05. RESEÑAS</a>
+      <a class="font-headline-lg text-xl uppercase tracking-wider text-secondary hover:text-primary-container transition-colors" href="contacto.html">06. CONTACTO</a>
     </nav>
 
     <div class="pt-6 border-t border-white/10">
@@ -185,16 +184,63 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer id="contacto" class="w-full bg-[#050505] border-t border-white/10">
-    <div class="max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-16 pb-12">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-3">
-          <img alt="FIT & PLUS Logo" class="h-9 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.png">
-          <span class="font-headline-md text-headline-md tracking-wider uppercase text-on-surface">FIT & PLUS</span>
+  <!-- Standardized Footer -->
+  <footer class="w-full bg-[#050505] border-t border-white/10 text-on-surface">
+    <div class="max-w-[1600px] mx-auto px-6 md:px-12 pt-16 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-white/10">
+        
+        <!-- Brand Column -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <img alt="FIT & PLUS Logo" class="h-10 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.png">
+            <span class="font-headline-md text-2xl tracking-wider uppercase text-white font-bold">FIT & PLUS</span>
+          </div>
+          <p class="font-body-md text-gray-400 text-base max-w-md">
+            Entrena con buen rollo, pasión y disciplina en grupos reducidos para alcanzar tu mejor versión física y mental.
+          </p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="inline-block w-2.5 h-2.5 bg-[#CCFF00] animate-pulse rounded-full"></span>
+            <span class="font-technical-mono text-xs uppercase tracking-widest text-[#CCFF00] font-bold">LAS PALMAS DE GRAN CANARIA</span>
+          </div>
         </div>
-        <p class="font-technical-mono text-xs uppercase text-gray-500">© 2025 FIT & PLUS. TODOS LOS DERECHOS RESERVADOS.</p>
+
+        <!-- Navigation Links Column -->
+        <div class="lg:col-span-3 space-y-4">
+          <h3 class="font-headline-sm text-lg uppercase text-white tracking-wider font-bold">NAVEGACIÓN</h3>
+          <ul class="space-y-2 font-technical-mono text-sm uppercase">
+            <li><a class="text-gray-400 hover:text-[#CCFF00] transition-colors" href="index.html#inicio">INICIO</a></li>
+            <li><a class="text-gray-400 hover:text-[#CCFF00] transition-colors" href="index.html#cronograma">PROGRAMA SEMANAL</a></li>
+            <li><a class="text-gray-400 hover:text-[#CCFF00] transition-colors" href="index.html#tarifas">TARIFAS</a></li>
+            <li><a class="text-gray-400 hover:text-[#CCFF00] transition-colors" href="index.html#resenas">RESEÑAS</a></li>
+            <li><a class="text-gray-400 hover:text-[#CCFF00] transition-colors" href="contacto.html">CONTACTO</a></li>
+          </ul>
+        </div>
+
+        <!-- Location & Contact Info Column -->
+        <div class="lg:col-span-4 space-y-4">
+          <h3 class="font-headline-sm text-lg uppercase text-white tracking-wider font-bold">UBICACIÓN & CONTACTO</h3>
+          <p class="font-body-sm text-gray-300 text-sm leading-relaxed">
+            C. Jordán, 82, 35018<br>Las Palmas de Gran Canaria, Las Palmas
+          </p>
+          <div class="pt-1">
+            <p class="font-technical-mono text-xs text-gray-400 uppercase">ATENCIÓN AL CLIENTE:</p>
+            <p class="font-technical-mono text-sm text-white font-bold">08:30h - 20:00h (LUNES A SÁBADO)</p>
+          </div>
+          <p class="font-technical-mono text-sm text-[#CCFF00] font-bold">
+            TEL / WHATSAPP: 614 48 93 90
+          </p>
+        </div>
+
       </div>
+
+      <!-- Bottom Credits Line -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-xs font-technical-mono uppercase">
+        <p class="text-gray-400">© 2026 FIT & PLUS. TODOS LOS DERECHOS RESERVADOS.</p>
+        <p class="text-white font-bold tracking-wider">
+          HECHO POR <a href="https://gdmdeveloper.es" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#CCFF00] underline underline-offset-4 font-bold transition-colors">GDM.DEVELOPER</a>
+        </p>
+      </div>
+
     </div>
   </footer>
 
