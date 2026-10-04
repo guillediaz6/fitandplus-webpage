@@ -1,16 +1,17 @@
 /**
  * FIT & PLUS - MAIN APPLICATION SCRIPT
  * Handles navigation, interactive filters, mobile drawer, toasts and smooth scrolling.
+ * Optimized with requestAnimationFrame and passive scroll listeners for maximum FPS.
  */
 
 function initApp() {
-  try { initNavbar(); } catch (e) { console.error('Navbar init error:', e); }
-  try { initMobileMenu(); } catch (e) { console.error('MobileMenu init error:', e); }
-  try { initSmoothScroll(); } catch (e) { console.error('SmoothScroll init error:', e); }
-  try { initScheduleInteractions(); } catch (e) { console.error('Schedule init error:', e); }
-  try { initMembershipButtons(); } catch (e) { console.error('Membership init error:', e); }
-  try { initBackToTop(); } catch (e) { console.error('BackToTop init error:', e); }
-  try { initParallax(); } catch (e) { console.error('Parallax init error:', e); }
+  try { initNavbar(); } catch (e) { /* silent init */ }
+  try { initMobileMenu(); } catch (e) { /* silent init */ }
+  try { initSmoothScroll(); } catch (e) { /* silent init */ }
+  try { initScheduleInteractions(); } catch (e) { /* silent init */ }
+  try { initMembershipButtons(); } catch (e) { /* silent init */ }
+  try { initBackToTop(); } catch (e) { /* silent init */ }
+  try { initParallax(); } catch (e) { /* silent init */ }
 }
 
 if (document.readyState === 'loading') {
@@ -53,14 +54,17 @@ function showToast(message, type = 'red') {
 }
 
 /**
- * Navbar Active States & Scroll Detection
+ * Navbar Active States & Scroll Detection (Throttled with requestAnimationFrame)
  */
 function initNavbar() {
   const header = document.querySelector('header');
   const navLinks = document.querySelectorAll('nav a[data-path], .mobile-nav-links a[data-path]');
   const sections = document.querySelectorAll('section[id]');
+  if (!header && !navLinks.length) return;
 
-  window.addEventListener('scroll', () => {
+  let ticking = false;
+
+  function updateNavbar() {
     // Header shadow on scroll
     if (window.scrollY > 50) {
       header?.classList.add('shadow-lg', 'bg-[#0B0D0F]/95');
@@ -92,7 +96,16 @@ function initNavbar() {
         }
       });
     }
-  });
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateNavbar);
+      ticking = true;
+    }
+  }, { passive: true });
 }
 
 /**
@@ -131,17 +144,21 @@ function initSmoothScroll() {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
       if (targetId && targetId !== '#') {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          e.preventDefault();
-          const headerOffset = 80;
-          const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        try {
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            const headerOffset = 80;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        } catch (err) {
+          // Fallback if selector is malformed
         }
       }
     });
@@ -152,7 +169,6 @@ function initSmoothScroll() {
  * Class Schedule & Station Reservation Interactions
  */
 function initScheduleInteractions() {
-  // Station time pills click
   const timePills = document.querySelectorAll('#cronograma span[class*="border-[#CCFF00]"], #clases span[class*="border-[#CCFF00]"]');
   timePills.forEach(pill => {
     pill.style.cursor = 'pointer';
@@ -166,11 +182,9 @@ function initScheduleInteractions() {
     });
   });
 
-  // Action cards reservation button click
   const reserveButtons = document.querySelectorAll('#cronograma .group, #clases .group');
   reserveButtons.forEach(card => {
     card.addEventListener('click', (e) => {
-      // If not clicking a specific sub-button
       if (e.target.tagName !== 'SPAN' || !e.target.classList.contains('cursor-pointer')) {
         const title = card.querySelector('h3')?.textContent?.trim();
         if (title) {
@@ -187,8 +201,8 @@ function initScheduleInteractions() {
 function initMembershipButtons() {
   const planButtons = document.querySelectorAll('#tarifas .plan-btn');
   planButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const planCard = btn.closest('.bg-\\[\\#111418\\]');
+    btn.addEventListener('click', () => {
+      const planCard = btn.closest('.bg-\[\#111418\]');
       const planName = planCard?.querySelector('h4')?.textContent?.trim() || 'FIT & PLUS';
       showToast(`Has seleccionado: ${planName}. Contactando con FIT & PLUS...`, 'lime');
     });
@@ -196,13 +210,15 @@ function initMembershipButtons() {
 }
 
 /**
- * Back to Top Floating Button
+ * Back to Top Floating Button (Throttled with requestAnimationFrame)
  */
 function initBackToTop() {
   const backToTopBtn = document.getElementById('back-to-top');
   if (!backToTopBtn) return;
 
-  window.addEventListener('scroll', () => {
+  let ticking = false;
+
+  function updateBackToTop() {
     if (window.scrollY > 600) {
       backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
       backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
@@ -210,7 +226,15 @@ function initBackToTop() {
       backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
       backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
     }
-  });
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateBackToTop);
+      ticking = true;
+    }
+  }, { passive: true });
 
   backToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -219,14 +243,7 @@ function initBackToTop() {
 
 /**
  * Parallax Background Handling
- * Desktop: Pure native CSS background-attachment: fixed (Gym2)
- * Mobile: Static vertical Gym1 image with floating relief schedule
  */
 function initParallax() {
   // Pure native CSS background-attachment: fixed on desktop handles parallax effortlessly.
 }
-
-
-
-
-

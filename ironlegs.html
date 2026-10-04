@@ -3,10 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- Favicon e Iconos Oficiales -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&amp;family=Bebas+Neue&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/config.js"></script>
@@ -51,17 +56,17 @@
   }
   </script>
 </head>
-<body class="bg-[#050505] font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.65), rgba(5, 5, 5, 0.65)), url('assets/images/fondo.webp'); background-repeat: repeat-y; background-size: 100% auto;">
+<body class="bg-[#050505] subpage-bg font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
 
   <!-- Fixed Navigation Header -->
   <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 pointer-events-auto border-b-2 border-[#E50914] shadow-[0_4px_25px_rgba(229,9,20,0.35)]">
     <div class="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-      <img src="assets/images/header.webp" alt="Header Banner Texture" class="w-full h-full object-cover object-center scale-[1.4] md:scale-100 transform filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]">
+      <img src="assets/images/header.webp" alt="Header Banner Texture" width="1672" height="175" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-center scale-[1.4] md:scale-100 transform filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]">
     </div>
 
     <div class="relative z-10 h-24 md:h-28 max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between pt-1 pb-3">
       <a href="index.html" class="flex items-center gap-4 group">
-        <img loading="eager" fetchpriority="high" decoding="async" alt="FIT & PLUS Logo Oficial" class="h-10 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(229,9,20,0.6)]" src="assets/images/logofit.webp">
+        <img loading="eager" fetchpriority="high" decoding="async" width="804" height="315" alt="FIT & PLUS Logo Oficial" class="h-10 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(229,9,20,0.6)]" src="assets/images/logofit.webp">
       </a>
 
       <nav class="hidden xl:flex items-center gap-8">
@@ -97,7 +102,7 @@
 
       <!-- Main Vertical Image Container (Tall & Full Vertical View) -->
       <div class="max-w-2xl mx-auto overflow-hidden border-2 border-white/40 shadow-2xl mb-12 bg-black">
-        <img loading="lazy" decoding="async" src="assets/images/ironlegs.webp" alt="IRONLEGS FIT & PLUS" class="w-full h-auto object-contain block">
+        <img loading="lazy" decoding="async" width="1108" height="1419" src="assets/images/ironlegs.webp" alt="IRONLEGS FIT & PLUS" class="w-full h-auto object-contain block">
       </div>
 
       <!-- Detailed Description & Highlights -->
@@ -169,7 +174,7 @@
 
         <!-- Vertical Video Container (Format 9:16) -->
         <div class="max-w-[420px] sm:max-w-[480px] mx-auto bg-black border-4 border-[#CCFF00] shadow-[0_0_40px_rgba(204,255,0,0.3)] relative overflow-hidden aspect-[9/16] group">
-          <video controls playsinline class="w-full h-full object-cover">
+          <video controls playsinline preload="none" class="w-full h-full object-cover">
             <source src="assets/video/ironlegs.mp4" type="video/mp4">
             Tu navegador no soporta la reproducción de vídeos verticales.
           </video>
@@ -191,7 +196,7 @@
   <div id="mobile-drawer" class="mobile-nav-drawer closed fixed inset-0 z-50 bg-[#050505] flex flex-col justify-between p-8 xl:hidden">
     <div class="flex items-center justify-between border-b border-white/10 pb-6">
       <div class="flex items-center gap-3">
-        <img loading="eager" fetchpriority="high" decoding="async" alt="FIT & PLUS Logo" class="h-8 w-auto filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.webp">
+        <img loading="lazy" decoding="async" width="804" height="315" alt="FIT & PLUS Logo" class="h-8 w-auto filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.webp">
         <span class="font-headline-md text-[22px] tracking-wider uppercase text-on-surface">FIT & PLUS</span>
       </div>
       <button id="mobile-menu-close" aria-label="Cerrar menú" class="p-2 text-white hover:text-primary-container">
@@ -231,7 +236,7 @@
         <!-- Brand Column -->
         <div class="lg:col-span-5 space-y-4">
           <div class="flex items-center gap-3">
-            <img loading="eager" fetchpriority="high" decoding="async" alt="FIT & PLUS Logo" class="h-10 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.webp">
+            <img width="804" height="315" loading="eager" fetchpriority="high" decoding="async" alt="FIT & PLUS Logo" class="h-10 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.webp">
             <span class="font-headline-md text-2xl tracking-wider uppercase text-white font-bold">FIT & PLUS</span>
           </div>
           <p class="font-body-md text-gray-400 text-base max-w-md">
@@ -283,6 +288,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 </html>

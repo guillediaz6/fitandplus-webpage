@@ -71,24 +71,29 @@
   </script>
 
   <!-- Preconnect & Fonts -->
+    <!-- Favicon e Iconos Oficiales -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/config.js"></script>
 </head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 pointer-events-auto border-b-2 border-[#E50914] shadow-[0_4px_25px_rgba(229,9,20,0.35)]">
     <!-- Header Background Torn Stone Image -->
     <div class="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-      <img src="assets/images/header.webp" alt="Header Banner Texture" class="w-full h-full object-cover md:object-cover object-center scale-[1.4] md:scale-100 transform filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]">
+      <img src="assets/images/header.webp" alt="Header Banner Texture" width="1672" height="175" fetchpriority="high" decoding="async" class="w-full h-full object-cover md:object-cover object-center scale-[1.4] md:scale-100 transform filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]">
     </div>
 
     <!-- Header Content Layer -->
     <div class="relative z-10 h-24 md:h-28 max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between pt-1 pb-3">
       <!-- Brand Logo -->
       <a href="#inicio" class="flex items-center gap-4 group">
-        <img loading="eager" fetchpriority="high" decoding="async" alt="FIT & PLUS Logo Oficial" class="h-10 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(229,9,20,0.6)]" src="assets/images/logofit.webp">
+        <img loading="eager" fetchpriority="high" decoding="async" width="804" height="315" alt="FIT & PLUS Logo Oficial" class="h-10 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(229,9,20,0.6)]" src="assets/images/logofit.webp">
       </a>
 
       <!-- Desktop Navigation Menu -->
@@ -119,9 +124,8 @@
 <section id="inicio" class="relative w-full min-h-[105vh] md:min-h-[118vh] flex flex-col justify-center -mt-20 pt-32 md:pt-40 pb-16 md:pb-20 overflow-hidden bg-[#050505] z-10">
 <!-- Background Video with Scrims & Dynamic Athletic Atmosphere -->
 <div class="absolute inset-0 z-0">
-  <video autoplay loop muted playsinline class="w-full h-full object-cover object-center filter brightness-[0.80] contrast-[1.15] scale-[1.01]">
+  <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover object-center filter brightness-[0.80] contrast-[1.15] scale-[1.01]">
     <source src="assets/images/portadafitandplus.mp4" type="video/mp4">
-    <source src="assets/images/portadafitandplus.mov" type="video/quicktime">
   </video>
   <!-- Radial Spotlight Overlay into Carbon Black -->
   <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,#050505_95%)] opacity-55"></div>
@@ -219,7 +223,7 @@
 
   <!-- Image Container (Mobile: Abajo de la sección con degradado hacia negro puro | Desktop: A la derecha pegado al borde con degradado a la izquierda) -->
   <div class="relative lg:absolute top-auto lg:top-0 bottom-0 right-0 w-full lg:w-[50%] xl:w-[52%] h-[380px] sm:h-[480px] lg:h-full z-0 overflow-hidden mt-12 lg:mt-0">
-    <img loading="lazy" decoding="async" src="assets/images/manifiesto-chalk.webp" alt="Atleta aplicando magnesio FIT & PLUS" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-90 transform hover:scale-105 transition-transform duration-700">
+    <img width="286" height="512" loading="lazy" decoding="async" src="assets/images/manifiesto-chalk.webp" alt="Atleta aplicando magnesio FIT & PLUS" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-90 transform hover:scale-105 transition-transform duration-700">
     
     <!-- Mobile Gradient Fade Top and Bottom to Solid Black -->
     <div class="absolute inset-0 bg-[linear-gradient(to_bottom,#050505_0%,transparent_25%,transparent_70%,#050505_100%)] lg:hidden"></div>
@@ -239,7 +243,7 @@
 <div class="relative w-full overflow-hidden bg-[#050505] pt-0 pb-6 md:py-12 shadow-[0_0_50px_rgba(0,0,0,0.9)]">
   <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(229,9,20,0.15)_0%,transparent_75%)] pointer-events-none"></div>
   <div class="w-full flex items-center justify-center min-h-[340px] sm:min-h-[440px] md:min-h-[auto]">
-    <img loading="lazy" decoding="async" alt="Atleta Fuerza Fit & Plus ejecutando Front Squat con barra olímpica" class="w-full h-full min-h-[340px] sm:min-h-[440px] md:min-h-0 object-cover md:object-contain block transform hover:scale-[1.008] transition-transform duration-700 select-none" src="assets/images/fotohori.webp">
+    <img width="1458" height="725" loading="lazy" decoding="async" alt="Atleta Fuerza Fit & Plus ejecutando Front Squat con barra olímpica" class="w-full h-full min-h-[340px] sm:min-h-[440px] md:min-h-0 object-cover md:object-contain block transform hover:scale-[1.008] transition-transform duration-700 select-none" src="assets/images/fotohori.webp">
   </div>
 </div>
 
@@ -264,7 +268,7 @@
         <!-- Card 1: HIBRIDFIT -->
         <a href="hibridfit.html" class="group relative bg-[#111418] aspect-[3/4] min-h-[460px] sm:min-h-[540px] lg:min-h-[620px] xl:min-h-[680px] flex items-end p-8 md:p-12 overflow-hidden transition-all duration-300 border-2 border-white/40 hover:border-[#CCFF00] shadow-[0_0_25px_rgba(255,255,255,0.15)] hover:shadow-[0_0_35px_rgba(204,255,0,0.25)] block">
           <!-- Sharp Clear Vertical Image -->
-          <img loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.85] contrast-110" alt="HIBRIDFIT" src="assets/images/hibridfit.webp">
+          <img width="1108" height="1419" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.85] contrast-110" alt="HIBRIDFIT" src="assets/images/hibridfit.webp">
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent"></div>
           
           <!-- Only Name -->
@@ -276,7 +280,7 @@
         <!-- Card 2: FUERZA FIT & PLUS -->
         <a href="fuerza-fit.html" class="group relative bg-[#111418] aspect-[3/4] min-h-[460px] sm:min-h-[540px] lg:min-h-[620px] xl:min-h-[680px] flex items-end p-8 md:p-12 overflow-hidden transition-all duration-300 border-2 border-white/40 hover:border-[#CCFF00] shadow-[0_0_25px_rgba(255,255,255,0.15)] hover:shadow-[0_0_35px_rgba(204,255,0,0.25)] block">
           <!-- Sharp Clear Vertical Image -->
-          <img loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.85] contrast-110" alt="FUERZA FIT & PLUS" src="assets/images/fuerza.webp">
+          <img width="1189" height="1323" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.85] contrast-110" alt="FUERZA FIT & PLUS" src="assets/images/fuerza.webp">
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent"></div>
           
           <!-- Only Name -->
@@ -288,7 +292,7 @@
         <!-- Card 3: IRONLEGS -->
         <a href="ironlegs.html" class="group relative bg-[#111418] aspect-[3/4] min-h-[460px] sm:min-h-[540px] lg:min-h-[620px] xl:min-h-[680px] flex items-end p-8 md:p-12 overflow-hidden transition-all duration-300 border-2 border-white/40 hover:border-[#CCFF00] shadow-[0_0_25px_rgba(255,255,255,0.15)] hover:shadow-[0_0_35px_rgba(204,255,0,0.25)] block">
           <!-- Sharp Clear Vertical Image -->
-          <img loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.85] contrast-110" alt="IRONLEGS" src="assets/images/ironlegs.webp">
+          <img width="1108" height="1419" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.85] contrast-110" alt="IRONLEGS" src="assets/images/ironlegs.webp">
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent"></div>
           
           <!-- Only Name -->
@@ -300,7 +304,7 @@
         <!-- Card 4: TWC (WARRIOR CHALLENGE) -->
         <a href="warrior-challenge.html" class="group relative bg-[#111418] aspect-[3/4] min-h-[460px] sm:min-h-[540px] lg:min-h-[620px] xl:min-h-[680px] flex items-end p-8 md:p-12 overflow-hidden transition-all duration-300 border-2 border-white/40 hover:border-[#CCFF00] shadow-[0_0_25px_rgba(255,255,255,0.15)] hover:shadow-[0_0_35px_rgba(204,255,0,0.25)] block">
           <!-- Sharp Clear Vertical Image -->
-          <img loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.85] contrast-110" alt="THE WARRIOR CHALLENGE" src="assets/images/twc.webp">
+          <img width="1086" height="1448" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.85] contrast-110" alt="THE WARRIOR CHALLENGE" src="assets/images/twc.webp">
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent"></div>
           
           <!-- Only Name -->
@@ -472,7 +476,7 @@
   <polygon points="0,22 0,31 31,0 22,0" fill="currentColor"/>
 </svg>
 <div class="flex items-center gap-3 pt-2">
-  <img loading="lazy" decoding="async" src="assets/images/logo1.webp" alt="Rendimiento Deportivo" class="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+  <img loading="lazy" decoding="async" width="1254" height="1254" src="assets/images/logo1.webp" alt="Rendimiento Deportivo" class="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
 </div>
 <h3 class="font-headline-lg text-2xl sm:text-3xl lg:text-3xl xl:text-4xl uppercase text-[#F5F5F5] font-bold tracking-wider leading-tight m-0">
   RENDIMIENTO DEPORTIVO
@@ -486,7 +490,7 @@
   <polygon points="0,22 0,31 31,0 22,0" fill="currentColor"/>
 </svg>
 <div class="flex items-center gap-3 pt-2">
-  <img loading="lazy" decoding="async" src="assets/images/logo2.webp" alt="Entrenamientos en Pareja" class="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+  <img loading="lazy" decoding="async" width="1415" height="1112" src="assets/images/logo2.webp" alt="Entrenamientos en Pareja" class="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
 </div>
 <h3 class="font-headline-lg text-2xl sm:text-3xl lg:text-3xl xl:text-4xl uppercase text-[#F5F5F5] font-bold tracking-wider leading-tight m-0">
   ENTRENAMIENTOS EN PAREJA
@@ -500,7 +504,7 @@
   <polygon points="0,22 0,31 31,0 22,0" fill="currentColor"/>
 </svg>
 <div class="flex items-center gap-3 pt-2">
-  <img loading="lazy" decoding="async" src="assets/images/logo3.webp" alt="Nutrición Personalizada" class="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+  <img loading="lazy" decoding="async" width="1339" height="1174" src="assets/images/logo3.webp" alt="Nutrición Personalizada" class="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
 </div>
 <h3 class="font-headline-lg text-2xl sm:text-3xl lg:text-3xl xl:text-4xl uppercase text-[#F5F5F5] font-bold tracking-wider leading-tight m-0">
   NUTRICIÓN PERSONALIZADA
@@ -514,7 +518,7 @@
   <polygon points="0,22 0,31 31,0 22,0" fill="currentColor"/>
 </svg>
 <div class="flex items-center gap-3 pt-2">
-  <img loading="lazy" decoding="async" src="assets/images/logo4.webp" alt="Entrenamientos Personales" class="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+  <img loading="lazy" decoding="async" width="1254" height="1254" src="assets/images/logo4.webp" alt="Entrenamientos Personales" class="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
 </div>
 <h3 class="font-headline-lg text-2xl sm:text-3xl lg:text-3xl xl:text-4xl uppercase text-[#F5F5F5] font-bold tracking-wider leading-tight m-0">
   ENTRENAMIENTOS PERSONALES
@@ -534,7 +538,7 @@
 
 <!-- Banner Horizontal Sin Permanencia (De lado a lado con línea blanca arriba y abajo) -->
 <div class="w-full border-y border-white/40 overflow-hidden bg-black shadow-[0_0_80px_rgba(0,0,0,0.95)]">
-  <img loading="lazy" decoding="async" src="assets/images/sinpermanencia.webp" alt="Sin Permanencia - FIT & PLUS" class="w-full h-auto lg:h-[530px] xl:h-[620px] 2xl:h-[690px] block object-cover object-[center_48%]" style="object-position: center 48%;">
+  <img width="2958" height="1168" loading="lazy" decoding="async" src="assets/images/sinpermanencia.webp" alt="Sin Permanencia - FIT & PLUS" class="w-full h-auto lg:h-[530px] xl:h-[620px] 2xl:h-[690px] block object-cover object-[center_48%]" style="object-position: center 48%;">
 </div>
 
 <div class="max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-space-2xl md:pt-space-3xl">
@@ -644,28 +648,28 @@
 <!-- Editorial Discontinuous Grid -->
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 <a href="hibridfit.html" class="relative block overflow-hidden bg-black aspect-[3/4] border-2 border-white/40">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover grayscale contrast-125" data-alt="Hibridfit" src="assets/images/gallery-barbell.webp">
+<img loading="lazy" decoding="async" width="512" height="279" class="w-full h-full object-cover grayscale contrast-125" alt="Hibridfit entrenamiento - Barra olímpica" src="assets/images/gallery-barbell.webp">
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-4 left-4">
 <span class="font-headline-md text-headline-md uppercase text-white/80">TRAIN</span>
 </div>
 </a>
 <a href="fuerza-fit.html" class="relative block overflow-hidden bg-black aspect-[3/4] md:translate-y-6 border-2 border-white/40">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover grayscale contrast-125" data-alt="Fuerza Fit" src="assets/images/gallery-back.webp">
+<img loading="lazy" decoding="async" width="512" height="279" class="w-full h-full object-cover grayscale contrast-125" alt="Fuerza Fit entrenamiento - Espalda y dominadas" src="assets/images/gallery-back.webp">
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-4 left-4">
 <span class="font-headline-md text-headline-md uppercase text-white/80">MOVE</span>
 </div>
 </a>
 <a href="ironlegs.html" class="relative block overflow-hidden bg-black aspect-[3/4] border-2 border-white/40">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover grayscale contrast-125" data-alt="Ironlegs" src="assets/images/gallery-portrait.webp">
+<img loading="lazy" decoding="async" width="512" height="286" class="w-full h-full object-cover grayscale contrast-125" alt="Ironlegs entrenamiento - Rendimiento y movilidad" src="assets/images/gallery-portrait.webp">
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-4 left-4">
 <span class="font-headline-md text-headline-md uppercase text-white/80">PUSH</span>
 </div>
 </a>
 <a href="warrior-challenge.html" class="relative block overflow-hidden bg-black aspect-[3/4] md:translate-y-6 border-2 border-white/40">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover grayscale contrast-125" data-alt="Warrior Challenge" src="assets/images/gallery-kettlebells.webp">
+<img loading="lazy" decoding="async" width="512" height="286" class="w-full h-full object-cover grayscale contrast-125" alt="The Warrior Challenge - Kettlebells y alta intensidad" src="assets/images/gallery-kettlebells.webp">
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-4 left-4">
 <span class="font-headline-md text-headline-md uppercase text-white/80">REPEAT</span>
@@ -732,7 +736,7 @@
           </p>
         </div>
         <div class="border-t border-gray-200 pt-4 mt-auto">
-          <h4 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">David Santana</h4>
+          <h3 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">David Santana</h3>
         </div>
       </div>
 
@@ -751,7 +755,7 @@
           </p>
         </div>
         <div class="border-t border-gray-200 pt-4 mt-auto">
-          <h4 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Arimas Santana</h4>
+          <h3 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Arimas Santana</h3>
         </div>
       </div>
 
@@ -770,7 +774,7 @@
           </p>
         </div>
         <div class="border-t border-gray-200 pt-4 mt-auto">
-          <h4 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Monica Quintana</h4>
+          <h3 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Monica Quintana</h3>
         </div>
       </div>
 
@@ -789,7 +793,7 @@
           </p>
         </div>
         <div class="border-t border-gray-200 pt-4 mt-auto">
-          <h4 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Tania GG</h4>
+          <h3 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Tania GG</h3>
         </div>
       </div>
 
@@ -808,7 +812,7 @@
           </p>
         </div>
         <div class="border-t border-gray-200 pt-4 mt-auto">
-          <h4 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Hector Romero Vega</h4>
+          <h3 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Hector Romero Vega</h3>
         </div>
       </div>
 
@@ -827,7 +831,7 @@
           </p>
         </div>
         <div class="border-t border-gray-200 pt-4 mt-auto">
-          <h4 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Echedey Salgado Martín</h4>
+          <h3 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Echedey Salgado Martín</h3>
         </div>
       </div>
 
@@ -846,7 +850,7 @@
           </p>
         </div>
         <div class="border-t border-gray-200 pt-4 mt-auto">
-          <h4 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Joel Rodriguez Armas</h4>
+          <h3 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Joel Rodriguez Armas</h3>
         </div>
       </div>
 
@@ -865,7 +869,7 @@
           </p>
         </div>
         <div class="border-t border-gray-200 pt-4 mt-auto">
-          <h4 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Ana Cam</h4>
+          <h3 class="font-bold text-gray-900 text-lg uppercase tracking-wider m-0">Ana Cam</h4>
         </div>
       </div>
 
@@ -901,7 +905,7 @@
       <!-- Brand Column -->
       <div class="lg:col-span-5 space-y-4">
         <div class="flex items-center gap-3">
-          <img alt="FIT & PLUS Logo" class="h-10 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.webp">
+          <img width="804" height="315" alt="FIT & PLUS Logo" class="h-10 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.webp">
           <span class="font-headline-md text-2xl tracking-wider uppercase text-white font-bold">FIT & PLUS</span>
         </div>
         <p class="font-body-md text-gray-400 text-base max-w-md">
@@ -957,7 +961,7 @@
   <div id="mobile-drawer" class="mobile-nav-drawer closed fixed inset-0 z-50 bg-[#050505] flex flex-col justify-between p-8 xl:hidden">
     <div class="flex items-center justify-between border-b border-white/10 pb-6">
       <div class="flex items-center gap-3">
-        <img alt="FIT & PLUS Logo" class="h-8 w-auto filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.webp">
+        <img width="804" height="315" alt="FIT & PLUS Logo" class="h-8 w-auto filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.webp">
         <span class="font-headline-md text-[22px] tracking-wider uppercase text-on-surface">FIT & PLUS</span>
       </div>
       <button id="mobile-menu-close" aria-label="Cerrar menú" class="p-2 text-white hover:text-primary-container">
@@ -990,5 +994,5 @@
   </div>
 
   <!-- Interactive JavaScript Logic -->
-  <script src="js/main.js"></script>
+  <script defer src="js/main.js"></script>
 </body></html>
