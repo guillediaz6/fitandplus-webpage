@@ -163,26 +163,36 @@
 
       </div>
 
-      <!-- Vertical Video Section -->
-      <div class="border-t border-white/20 pt-16">
+      <!-- Vertical Video Section con Marco Smartphone -->
+      <div class="border-t border-white/20 pt-16 pb-8">
         <div class="text-center max-w-2xl mx-auto mb-10">
           <h2 class="font-headline-lg text-3xl sm:text-5xl uppercase text-white font-bold m-0">VÍDEO DE IRONLEGS</h2>
+          <p class="font-technical-mono text-sm text-[#CCFF00] uppercase tracking-widest mt-2 font-bold">DALE AL PLAY PARA VER EL ENTRENAMIENTO EN ACCIÓN</p>
         </div>
 
-        <!-- Vertical Video Container (Format 9:16) -->
-        <div class="max-w-[420px] sm:max-w-[480px] mx-auto bg-black border-4 border-[#CCFF00] shadow-[0_0_40px_rgba(204,255,0,0.3)] relative overflow-hidden aspect-[9/16] group">
-          <video controls playsinline preload="none" class="w-full h-full object-cover">
-            <source src="assets/video/ironlegs.mp4" type="video/mp4">
-            Tu navegador no soporta la reproducción de vídeos verticales.
-          </video>
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col items-center justify-between p-6 pointer-events-none group-hover:opacity-30 transition-opacity duration-300">
-            <span class="font-technical-mono text-xs text-[#CCFF00] uppercase tracking-widest bg-black/80 px-3 py-1 border border-[#CCFF00]/40">FORMATO VERTICAL 9:16</span>
-            <div class="text-center">
-              <span class="material-symbols-outlined text-6xl text-[#CCFF00]">play_circle</span>
-              <p class="font-headline-md text-lg text-white uppercase tracking-wider mt-2">IRONLEGS</p>
+        <!-- Smartphone Frame Wrapper -->
+        <div class="phone-mockup-wrapper relative w-full max-w-[310px] sm:max-w-[350px] mx-auto aspect-[705/1254] select-none filter drop-shadow-[0_25px_60px_rgba(0,0,0,0.95)]">
+          
+          <!-- Screen Area (Video sits precisely inside the cutout without overflowing) -->
+          <div class="absolute top-[6.62%] bottom-[3.51%] left-[6.24%] right-[6.38%] overflow-hidden rounded-[26px] sm:rounded-[34px] bg-black z-0">
+            <video playsinline preload="metadata" poster="assets/images/poster-ironlegs.webp" class="w-full h-full object-cover block cursor-pointer">
+              <source src="assets/images/ironlegs.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de vídeos.
+            </video>
+
+            <!-- Interactive Play Overlay -->
+            <div class="phone-play-overlay absolute inset-0 bg-black/40 hover:bg-black/25 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 z-20">
+              <button type="button" aria-label="Reproducir vídeo" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#E50914] hover:bg-[#FF1820] text-white flex items-center justify-center shadow-[0_0_35px_rgba(229,9,20,0.85)] transform transition-transform duration-300 hover:scale-110 active:scale-95">
+                <span class="material-symbols-outlined text-[38px] sm:text-[46px] ml-1">play_arrow</span>
+              </button>
+              <span class="mt-4 font-headline-md text-xs sm:text-sm text-white uppercase tracking-wider bg-black/80 px-3.5 py-1.5 border border-white/20 shadow-lg">
+                DALE AL PLAY
+              </span>
             </div>
-            <span class="text-xs text-gray-400 font-technical-mono uppercase">FIT & PLUS MADRID</span>
           </div>
+
+          <!-- Phone Frame Mockup (Overlayed seamlessly on top of video) -->
+          <img src="assets/images/marcomovil.webp" alt="Marco Smartphone FIT & PLUS" width="705" height="1254" class="absolute inset-0 w-full h-full object-fill pointer-events-none z-10 select-none">
         </div>
       </div>
 

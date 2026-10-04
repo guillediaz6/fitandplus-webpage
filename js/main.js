@@ -12,6 +12,7 @@ function initApp() {
   try { initMembershipButtons(); } catch (e) { /* silent init */ }
   try { initBackToTop(); } catch (e) { /* silent init */ }
   try { initParallax(); } catch (e) { /* silent init */ }
+  try { initPhoneVideos(); } catch (e) { /* silent init */ }
 }
 
 if (document.readyState === 'loading') {
@@ -246,4 +247,62 @@ function initBackToTop() {
  */
 function initParallax() {
   // Pure native CSS background-attachment: fixed on desktop handles parallax effortlessly.
+}
+
+/**
+ * Smartphone Mockup Video Controller
+ * Plays video only when user clicks/taps play, with interactive overlay and auto-pause
+ */
+function initPhoneVideos() {
+  const wrappers = document.querySelectorAll('.phone-mockup-wrapper');
+  wrappers.forEach(wrapper => {
+    const video = wrapper.querySelector('video');
+    const overlay = wrapper.querySelector('.phone-play-overlay');
+    if (!video || !overlay) return;
+
+    function startPlayback() {
+      // Pause any other playing phone videos
+      document.querySelectorAll('.phone-mockup-wrapper video').forEach(v => {
+        if (v !== video && !v.paused) v.pause();
+      });
+
+      video.play().catch(err => {
+        console.warn('Playback error:', err);
+      });
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    function pausePlayback() {
+      video.pause();
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    // Click on overlay -> start
+    overlay.addEventListener('click', (e) => {
+      e.stopPropagation();
+      startPlayback();
+    });
+
+    // Toggle play/pause by clicking video
+    video.addEventListener('click', () => {
+      if (video.paused) {
+        startPlayback();
+      } else {
+        pausePlayback();
+      }
+    });
+
+    // Native event syncing
+    video.addEventListener('pause', () => {
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+    });
+
+    video.addEventListener('ended', () => {
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+    });
+
+    video.addEventListener('play', () => {
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+    });
+  });
 }
