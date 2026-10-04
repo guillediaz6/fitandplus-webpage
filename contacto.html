@@ -12,17 +12,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/config.js"></script>
 </head>
-<body class="bg-[#050505] font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.65), rgba(5, 5, 5, 0.65)), url('assets/images/fondo.png'); background-repeat: repeat-y; background-size: 100% auto;">
+<body class="bg-[#050505] font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.65), rgba(5, 5, 5, 0.65)), url('assets/images/fondo.webp'); background-repeat: repeat-y; background-size: 100% auto;">
 
   <!-- Fixed Navigation Header -->
   <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 pointer-events-auto border-b-2 border-[#E50914] shadow-[0_4px_25px_rgba(229,9,20,0.35)]">
     <div class="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-      <img src="assets/images/header.png" alt="Header Banner Texture" class="w-full h-full object-cover object-center scale-[1.4] md:scale-100 transform filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]">
+      <img src="assets/images/header.webp" alt="Header Banner Texture" class="w-full h-full object-cover object-center scale-[1.4] md:scale-100 transform filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]">
     </div>
 
     <div class="relative z-10 h-24 md:h-28 max-w-[1600px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between pt-1 pb-3">
       <a href="index.html" class="flex items-center gap-4 group">
-        <img alt="FIT & PLUS Logo Oficial" class="h-10 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(229,9,20,0.6)]" src="assets/images/logofit.png">
+        <img alt="FIT & PLUS Logo Oficial" class="h-10 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(229,9,20,0.6)]" src="assets/images/logofit.webp">
       </a>
 
       <nav class="hidden xl:flex items-center gap-8">
@@ -49,13 +49,13 @@
   <main class="w-full pt-32 md:pt-40 pb-8">
     <div class="max-w-[1500px] mx-auto px-6 md:px-12">
 
-      <!-- Page Title Header -->
+      <!-- Page Title Header (Mismo tamaño y tipo de letra que Horarios y Tarifas) -->
       <div class="border-b border-white/20 pb-6 mb-10">
-        <h1 class="font-headline-lg text-5xl sm:text-7xl md:text-8xl text-white font-bold uppercase tracking-tight leading-none m-0">
+        <h1 class="font-headline-xl text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase text-white leading-none tracking-tight drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)] m-0">
           CONTACTO Y ATENCIÓN AL CLIENTE
         </h1>
-        <p class="font-body-lg text-gray-300 text-lg sm:text-xl mt-3">
-          Resuelve tus dudas, reserva tu clase de prueba o habla directamente con nuestro equipo en Las Palmas.
+        <p class="font-body-md text-secondary text-lg sm:text-xl font-medium mt-4">
+          Resuelve tus dudas, reserva tu clase de prueba o habla directamente con nuestro equipo.
         </p>
       </div>
 
@@ -67,15 +67,15 @@
           <div>
             <div class="flex items-center gap-3 text-[#CCFF00] mb-4">
               <span class="material-symbols-outlined text-4xl">schedule</span>
-              <span class="font-technical-mono text-xs uppercase tracking-widest text-gray-400">HORARIO DE ATENCIÓN</span>
+              <span class="font-technical-mono text-xs uppercase tracking-widest text-secondary">HORARIO DE ATENCIÓN</span>
             </div>
-            <h2 class="font-headline-md text-3xl md:text-4xl uppercase text-white font-bold mb-4">ATENCIÓN AL CLIENTE</h2>
-            <p class="text-gray-300 text-lg leading-relaxed">
+            <h2 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl uppercase text-white mb-4">ATENCIÓN AL CLIENTE</h2>
+            <p class="font-body-md text-secondary text-base sm:text-lg leading-relaxed">
               Nuestro equipo está a tu disposición para responder mensajes, llamadas o atenderte en nuestro centro:
             </p>
             <div class="mt-6 p-6 bg-black/70 border-l-4 border-[#CCFF00]">
-              <p class="font-headline-sm text-3xl md:text-4xl text-white font-bold">08:30h a 20:00h</p>
-              <p class="text-sm font-technical-mono text-gray-400 uppercase mt-2">Lunes a Sábado</p>
+              <p class="font-stat-counter text-3xl md:text-4xl lg:text-5xl text-white">08:30h a 20:00h</p>
+              <p class="text-sm font-technical-mono text-secondary uppercase tracking-wider mt-2">Lunes a Sábado</p>
             </div>
           </div>
         </div>
@@ -90,11 +90,11 @@
               </svg>
               <span class="font-technical-mono text-xs uppercase tracking-widest text-[#25D366]">DIRECTO EN WHATSAPP Y TELÉFONO</span>
             </div>
-            <h2 class="font-headline-md text-3xl md:text-4xl uppercase text-white font-bold mb-4">LLÁMANOS O ESCRÍBENOS</h2>
-            <p class="text-gray-300 text-lg leading-relaxed mb-4">
-              Respuesta inmediata para resolver dudas o coordinar tu primera sesión.
+            <h2 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl uppercase text-white mb-4">LLÁMANOS O ESCRÍBENOS</h2>
+            <p class="font-body-md text-secondary text-base sm:text-lg leading-relaxed mb-4">
+              Escríbenos o llámanos para resolver dudas o coordinar tu primera sesión.
             </p>
-            <p class="font-technical-mono text-4xl md:text-5xl font-bold text-white tracking-wider mb-6">
+            <p class="font-technical-mono text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-wider mb-6">
               614 48 93 90
             </p>
           </div>
@@ -115,10 +115,10 @@
           <div>
             <div class="flex items-center gap-3 text-[#CCFF00] mb-4">
               <span class="material-symbols-outlined text-4xl">location_on</span>
-              <span class="font-technical-mono text-xs uppercase tracking-widest text-gray-400">NUESTRA UBICACIÓN</span>
+              <span class="font-technical-mono text-xs uppercase tracking-widest text-secondary">NUESTRA UBICACIÓN</span>
             </div>
-            <h2 class="font-headline-md text-3xl md:text-4xl uppercase text-white font-bold mb-4">¿DÓNDE ENCONTRARNOS?</h2>
-            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            <h2 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl uppercase text-white mb-4">¿DÓNDE ENCONTRARNOS?</h2>
+            <p class="font-body-md text-secondary text-base sm:text-lg leading-relaxed mb-6">
               C. Jordán, 82, 35018 Las Palmas de Gran Canaria, Las Palmas
             </p>
           </div>
@@ -137,7 +137,7 @@
   <div id="mobile-drawer" class="mobile-nav-drawer closed fixed inset-0 z-50 bg-[#050505] flex flex-col justify-between p-8 xl:hidden">
     <div class="flex items-center justify-between border-b border-white/10 pb-6">
       <div class="flex items-center gap-3">
-        <img alt="FIT & PLUS Logo" class="h-8 w-auto filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.png">
+        <img alt="FIT & PLUS Logo" class="h-8 w-auto filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.webp">
         <span class="font-headline-md text-[22px] tracking-wider uppercase text-on-surface">FIT & PLUS</span>
       </div>
       <button id="mobile-menu-close" aria-label="Cerrar menú" class="p-2 text-white hover:text-primary-container">
@@ -177,7 +177,7 @@
         <!-- Brand Column -->
         <div class="lg:col-span-5 space-y-4">
           <div class="flex items-center gap-3">
-            <img alt="FIT & PLUS Logo" class="h-10 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.png">
+            <img alt="FIT & PLUS Logo" class="h-10 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]" src="assets/images/logofit.webp">
             <span class="font-headline-md text-2xl tracking-wider uppercase text-white font-bold">FIT & PLUS</span>
           </div>
           <p class="font-body-md text-gray-400 text-base max-w-md">

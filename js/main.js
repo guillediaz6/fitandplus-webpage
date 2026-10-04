@@ -185,12 +185,12 @@ function initScheduleInteractions() {
  * Membership Plan Selection Handling
  */
 function initMembershipButtons() {
-  const planButtons = document.querySelectorAll('#tarifas button, [data-path="tarifas"]');
+  const planButtons = document.querySelectorAll('#tarifas .plan-btn');
   planButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       const planCard = btn.closest('.bg-\\[\\#111418\\]');
-      const planName = planCard?.querySelector('h3')?.textContent?.trim() || 'FIT & PLUS PRO';
-      showToast(`Has seleccionado el plan: ${planName}. Redirigiendo a registro seguro...`, 'red');
+      const planName = planCard?.querySelector('h4')?.textContent?.trim() || 'FIT & PLUS';
+      showToast(`Has seleccionado: ${planName}. Contactando con FIT & PLUS...`, 'lime');
     });
   });
 }

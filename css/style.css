@@ -174,13 +174,13 @@
 }
 
 
-/* --- Black Sections Background Texture (fondo.png) --- */
+/* --- Black Sections Background Texture (fondo.webp) --- */
 .bg-texture-black {
   position: relative;
   background-color: #050505;
   background-image: 
     linear-gradient(to bottom, rgba(5, 5, 5, 0.45) 0%, rgba(5, 5, 5, 0.30) 50%, rgba(5, 5, 5, 0.50) 100%),
-    url('../assets/images/fondo.png');
+    url('../assets/images/fondo.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -195,7 +195,7 @@
   #horarios {
     background-image: 
       linear-gradient(to bottom, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.40) 50%, rgba(5, 5, 5, 0.90) 100%),
-      url('../assets/images/gym2.jpg');
+      url('../assets/images/gym2.webp');
     background-attachment: fixed;
     background-position: center top;
     background-repeat: no-repeat;
@@ -203,12 +203,12 @@
   }
 }
 
-/* 2. MOBILE & TABLETS (<= 1024px): fondohorario.jpg ajustado sin repetición, recortado arriba y extendido abajo con degradado negro al final */
+/* 2. MOBILE & TABLETS (<= 1024px): fondohorario.webp ajustado sin repetición, recortado arriba y extendido abajo con degradado negro al final */
 @media (max-width: 1024px) {
   #horarios {
     background-image: 
       linear-gradient(to bottom, rgba(5, 5, 5, 0.50) 0%, transparent 20%, transparent 80%, rgba(5, 5, 5, 1) 100%),
-      url('../assets/images/fondohorario.jpg');
+      url('../assets/images/fondohorario.webp');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center top;

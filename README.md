@@ -1,4 +1,4 @@
-﻿# FUERZA FIT & PLUS
+# FUERZA FIT & PLUS
 
 Plantilla web profesional de alto impacto para centro de rendimiento físico, fuerza biomecánica y conditioning.
 
@@ -11,23 +11,19 @@ El proyecto ha sido completamente reorganizado y estructurado bajo estándares m
 ```
 fitandplus/
 ├── index.html                  # Documento principal HTML5 semántico y limpio
-├── code.html                   # Archivo original preservado como respaldo
+├── contacto.html               # Página de contacto e información de ubicación
+├── fuerza-fit.html             # Página detallada del programa Fuerza Fit
+├── hibridfit.html              # Página detallada del programa Hibrid Fit
+├── ironlegs.html               # Página detallada del programa Iron Legs
+├── warrior-challenge.html      # Página detallada de The Warrior Challenge
 ├── css/
 │   └── style.css               # Estilos personalizados, variables CSS, animaciones y scrollbar
 ├── js/
 │   ├── config.js               # Configuración modular del motor Tailwind CSS
-│   └── main.js                 # Interactividad (menú móvil, scroll suave, notificaciones toast, selector)
+│   └── main.js                 # Interactividad (menú móvil, scroll suave, notificaciones toast)
 ├── assets/
-│   ├── images/
-│   │   ├── logofit.png         # Logotipo oficial FIT & + con acabado 3D rojo
-│   │   ├── header.png          # Textura de corte de piedra rasgada para el Header
-│   │   ├── fondo.png           # Textura de mármol negro premium para secciones oscuras
-│   │   ├── fotohori.png        # Banner horizontal cinemático de lado a lado
-│   │   ├── gym1.webp           # Fotografía de las instalaciones y jaulas de potencia
-│   │   └── ...                 # Demás fotografías de disciplinas y galería
-│   └── icons/                  # Directorio para recursos SVG e iconografía
-├── docs/
-│   └── DESIGN.md               # Guía completa de tokens, colores, tipografía y diseño
+│   └── images/                 # Recursos multimedia, logotipos, texturas y vídeos
+├── DESIGN.md                   # Guía completa de tokens, colores, tipografía y diseño
 └── README.md                   # Documentación técnica y guía de uso
 ```
 
