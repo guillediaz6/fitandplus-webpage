@@ -1,6 +1,6 @@
 /**
  * FIT & PLUS - MAIN APPLICATION SCRIPT
- * Handles navigation, interactive filters, mobile drawer, toasts and smooth scrolling.
+ * Handles navigation, mobile drawer, smooth scrolling and smartphone video mockup.
  * Optimized with requestAnimationFrame and passive scroll listeners for maximum FPS.
  */
 
@@ -8,8 +8,6 @@ function initApp() {
   try { initNavbar(); } catch (e) { /* silent init */ }
   try { initMobileMenu(); } catch (e) { /* silent init */ }
   try { initSmoothScroll(); } catch (e) { /* silent init */ }
-  try { initScheduleInteractions(); } catch (e) { /* silent init */ }
-  try { initMembershipButtons(); } catch (e) { /* silent init */ }
   try { initBackToTop(); } catch (e) { /* silent init */ }
   try { initParallax(); } catch (e) { /* silent init */ }
   try { initPhoneVideos(); } catch (e) { /* silent init */ }
@@ -19,39 +17,6 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initApp);
 } else {
   initApp();
-}
-
-/**
- * Toast Notification Utility
- */
-function showToast(message, type = 'red') {
-  let toast = document.getElementById('fitplus-toast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'fitplus-toast';
-    toast.className = 'toast-notification';
-    document.body.appendChild(toast);
-  }
-
-  toast.className = `toast-notification ${type === 'lime' ? 'lime' : ''}`;
-  toast.innerHTML = `
-    <span class="material-symbols-outlined text-[20px]" style="color: ${type === 'lime' ? '#CCFF00' : '#E50914'}">
-      ${type === 'lime' ? 'check_circle' : 'bolt'}
-    </span>
-    <div>
-      <div class="text-[11px] text-gray-400">NOTIFICACIÓN DEL SISTEMA</div>
-      <div class="text-sm font-semibold tracking-wider text-white">${message}</div>
-    </div>
-  `;
-
-  // Trigger animation
-  setTimeout(() => toast.classList.add('active'), 10);
-
-  // Auto hide after 3.5s
-  if (window.toastTimeout) clearTimeout(window.toastTimeout);
-  window.toastTimeout = setTimeout(() => {
-    toast.classList.remove('active');
-  }, 3500);
 }
 
 /**
@@ -162,50 +127,6 @@ function initSmoothScroll() {
           // Fallback if selector is malformed
         }
       }
-    });
-  });
-}
-
-/**
- * Class Schedule & Station Reservation Interactions
- */
-function initScheduleInteractions() {
-  const timePills = document.querySelectorAll('#cronograma span[class*="border-[#CCFF00]"], #clases span[class*="border-[#CCFF00]"]');
-  timePills.forEach(pill => {
-    pill.style.cursor = 'pointer';
-    pill.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const time = pill.textContent.trim();
-      const card = pill.closest('.group');
-      const day = card?.querySelector('.font-technical-mono')?.textContent?.trim() || 'SESIÓN';
-      const discipline = card?.querySelector('h3')?.textContent?.trim() || 'CLASE';
-      showToast(`Estación ${discipline} (${day}) pre-seleccionada a las ${time}h`, 'lime');
-    });
-  });
-
-  const reserveButtons = document.querySelectorAll('#cronograma .group, #clases .group');
-  reserveButtons.forEach(card => {
-    card.addEventListener('click', (e) => {
-      if (e.target.tagName !== 'SPAN' || !e.target.classList.contains('cursor-pointer')) {
-        const title = card.querySelector('h3')?.textContent?.trim();
-        if (title) {
-          showToast(`Abriendo reserva para: ${title}`, 'lime');
-        }
-      }
-    });
-  });
-}
-
-/**
- * Membership Plan Selection Handling
- */
-function initMembershipButtons() {
-  const planButtons = document.querySelectorAll('#tarifas .plan-btn');
-  planButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const planCard = btn.closest('.bg-\[\#111418\]');
-      const planName = planCard?.querySelector('h4')?.textContent?.trim() || 'FIT & PLUS';
-      showToast(`Has seleccionado: ${planName}. Contactando con FIT & PLUS...`, 'lime');
     });
   });
 }
